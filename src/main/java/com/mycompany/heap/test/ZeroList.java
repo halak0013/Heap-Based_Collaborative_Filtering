@@ -1,8 +1,8 @@
 //Bisimillahirrahmanirrahim
 package com.mycompany.heap.test;
 
-public class ZeroList {
-    Node root;
+public class ZeroList<E> {
+    Node<E> root;
     private int count = 0;
 
     public void insert(int data) {
@@ -12,7 +12,7 @@ public class ZeroList {
             if (root == null)
                 root = new Node(data, 0);
             else {
-                Node current = root;
+                Node<E> current = root;
                 while (current.next != null) {
                     current = current.next;
                 }
@@ -22,8 +22,20 @@ public class ZeroList {
         count++;
     }
 
+    public void insert(E data) {
+            if (root == null)
+                root = new Node(data);
+            else {
+                Node<E> current = root;
+                while (current.next != null) {
+                    current = current.next;
+                }
+                current.next = new Node(data);
+            }
+    }
+
     public void print() {
-        Node current = root;
+        Node<E> current = root;
         while (current != null) {
             System.out.print(current.data + " " + current.index + " - ");
             current = current.next;
@@ -31,14 +43,14 @@ public class ZeroList {
         System.out.println();
     }
 
-    public static double calculateCosSim(ZeroList main_vector, ZeroList target_vector) {
+    public static double calculateCosSim(ZeroList<Integer> main_vector, ZeroList<Integer> target_vector) {
         // ? vektörlerin çarpımı / vektörlerin uzunluklarının çarpımı
         // main : [1,1,1,0,0,1]
         // 1,2,3,6
         // target: [0,1,1,1,1,1]
         // 2,3,4,5,6
-        Node cur_main = main_vector.root;
-        Node cur_target = target_vector.root;
+        Node<Integer> cur_main = main_vector.root;
+        Node<Integer> cur_target = target_vector.root;
         double mul_of_vector = 0;
         double v_m_dis = 0;
         double v_t_dis = 0;
@@ -54,7 +66,7 @@ public class ZeroList {
                     cur_target = cur_target.next;
                 }
             }
-            
+
             mul_of_vector += cur_main.data * cur_target.data;
             v_m_dis += cur_main.data * cur_main.data;
             v_t_dis += cur_target.data * cur_target.data;
