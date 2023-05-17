@@ -22,6 +22,7 @@ public class csvRead<C> {
                     tmpZL.insert(i);
                 }
                 System.out.println(data[0]);
+                System.out.println(data[0]);
             }
         } catch (IOException e) {
             e.printStackTrace();
