@@ -1,18 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.heap.test;
 
-/**
- *
- * @author bismih
- */
 public class Ui extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Ui
-     */
     public Ui() {
         initComponents();
     }
