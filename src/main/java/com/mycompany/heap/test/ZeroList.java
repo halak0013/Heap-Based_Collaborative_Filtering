@@ -24,13 +24,13 @@ public class ZeroList<E> {
 
     public void insert(E data) {
             if (root == null)
-                root = new Node(data);
+                root = new Node<>(data);
             else {
                 Node<E> current = root;
                 while (current.next != null) {
                     current = current.next;
                 }
-                current.next = new Node(data);
+                current.next = new Node<>(data);
             }
     }
 
@@ -42,6 +42,7 @@ public class ZeroList<E> {
         }
         System.out.println();
     }
+
 
     public static double calculateCosSim(ZeroList<Integer> main_vector, ZeroList<Integer> target_vector) {
         // ? vektörlerin çarpımı / vektörlerin uzunluklarının çarpımı
@@ -79,8 +80,8 @@ public class ZeroList<E> {
     }
 
     public static void main(String[] args) {
-        ZeroList z1 = new ZeroList();
-        ZeroList z2 = new ZeroList();
+        ZeroList<Integer>z1 = new ZeroList<>();
+        ZeroList<Integer> z2 = new ZeroList<>();
         z1.insert(1);
         z1.insert(1);
         z1.insert(1);
