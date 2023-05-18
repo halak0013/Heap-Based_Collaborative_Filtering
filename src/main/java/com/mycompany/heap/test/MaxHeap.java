@@ -9,14 +9,15 @@ package com.mycompany.heap.test;
  * @author Casper
  */
 public class MaxHeap<T extends Comparable<T>> {
+
     T[] heap;
     int size;
-    
+
     public MaxHeap(int capacity) {
         heap = (T[]) new Comparable[capacity];
         size = 0;
     }
-    
+
     int parent(int idx) {
         return (idx - 1) / 2;
     }
@@ -26,7 +27,7 @@ public class MaxHeap<T extends Comparable<T>> {
         heap[idx_1] = heap[idx_2];
         heap[idx_2] = temp;
     }
-    
+
     void insert(T data) {
 
         if (size < heap.length) {
@@ -43,8 +44,8 @@ public class MaxHeap<T extends Comparable<T>> {
             System.out.println("Heap is full!!!");
         }
     }
-    
-         void print() {
+
+    void print() {
 
         for (int i = 0; i < parent(size - 1); i++) {
             int level = (int) (Math.log(i + 1) / Math.log(2));
@@ -61,7 +62,7 @@ public class MaxHeap<T extends Comparable<T>> {
             } else {
                 System.out.println("\t\tLeft child: - ");
             }
-            
+
             if (right < size) {
                 System.out.println("\t\tRight Child " + heap[right]);
             } else {

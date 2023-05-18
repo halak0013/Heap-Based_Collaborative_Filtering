@@ -15,18 +15,217 @@ public class Ui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        JPN_TargetUser_Selected = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        JCB_User_Select = new javax.swing.JComboBox<>();
+        JL_X = new javax.swing.JLabel();
+        JTF_X_Selected_Value = new javax.swing.JTextField();
+        JL_K = new javax.swing.JLabel();
+        JTF_K_Selected_Value = new javax.swing.JTextField();
+        JB_Get_Selected_Recommendation = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTA_Selected_Result = new javax.swing.JTextArea();
+        JPN_TargetUser_Insert = new javax.swing.JPanel();
+        JCB_First_Movie = new javax.swing.JComboBox<>();
+        JCB_Second_Movie = new javax.swing.JComboBox<>();
+        JCB_Third_Movie = new javax.swing.JComboBox<>();
+        JCB_Fourth_Movie = new javax.swing.JComboBox<>();
+        JCB_Fifth_Movie = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        JTF_X_Insert_Value = new javax.swing.JTextField();
+        JTF_K_Insert_Value = new javax.swing.JTextField();
+        JL_X1 = new javax.swing.JLabel();
+        JL_K1 = new javax.swing.JLabel();
+        JB_Get_Insert_Recommendation = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        JTA_Insert_Result = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTabbedPane1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setText("Target User:");
+
+        JL_X.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        JL_X.setText("X:");
+
+        JL_K.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        JL_K.setText("K:");
+
+        JB_Get_Selected_Recommendation.setText("Get Recommendations");
+
+        JTA_Selected_Result.setColumns(20);
+        JTA_Selected_Result.setRows(5);
+        jScrollPane1.setViewportView(JTA_Selected_Result);
+
+        javax.swing.GroupLayout JPN_TargetUser_SelectedLayout = new javax.swing.GroupLayout(JPN_TargetUser_Selected);
+        JPN_TargetUser_Selected.setLayout(JPN_TargetUser_SelectedLayout);
+        JPN_TargetUser_SelectedLayout.setHorizontalGroup(
+            JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JCB_User_Select, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addComponent(JL_X, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(JB_Get_Selected_Recommendation, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                                .addComponent(JTF_X_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JL_K, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JTF_K_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+        JPN_TargetUser_SelectedLayout.setVerticalGroup(
+            JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(JCB_User_Select, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JL_K)
+                            .addComponent(JTF_K_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JTF_X_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_X))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JB_Get_Selected_Recommendation)
+                .addGap(0, 161, Short.MAX_VALUE))
+            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1))
+        );
+
+        jTabbedPane1.addTab("Selected Part", JPN_TargetUser_Selected);
+
+        JL_X1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        JL_X1.setText("X:");
+
+        JL_K1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        JL_K1.setText("K:");
+
+        JB_Get_Insert_Recommendation.setText("Get Recommendations");
+
+        JTA_Insert_Result.setColumns(20);
+        JTA_Insert_Result.setRows(5);
+        jScrollPane2.setViewportView(JTA_Insert_Result);
+
+        javax.swing.GroupLayout JPN_TargetUser_InsertLayout = new javax.swing.GroupLayout(JPN_TargetUser_Insert);
+        JPN_TargetUser_Insert.setLayout(JPN_TargetUser_InsertLayout);
+        JPN_TargetUser_InsertLayout.setHorizontalGroup(
+            JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                            .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                            .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                            .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jTextField3)))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(JL_K1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(JL_X1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(JTF_X_Insert_Value, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                            .addComponent(JTF_K_Insert_Value)
+                            .addComponent(JB_Get_Insert_Recommendation, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        JPN_TargetUser_InsertLayout.setVerticalGroup(
+            JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JL_X1)
+                            .addComponent(JTF_X_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JTF_K_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_K1))
+                        .addGap(18, 18, 18)
+                        .addComponent(JB_Get_Insert_Recommendation)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Insert Part", JPN_TargetUser_Insert);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleName("Main_Part");
+        jTabbedPane1.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -67,5 +266,34 @@ public class Ui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JB_Get_Insert_Recommendation;
+    private javax.swing.JButton JB_Get_Selected_Recommendation;
+    private javax.swing.JComboBox<String> JCB_Fifth_Movie;
+    private javax.swing.JComboBox<String> JCB_First_Movie;
+    private javax.swing.JComboBox<String> JCB_Fourth_Movie;
+    private javax.swing.JComboBox<String> JCB_Second_Movie;
+    private javax.swing.JComboBox<String> JCB_Third_Movie;
+    private javax.swing.JComboBox<String> JCB_User_Select;
+    private javax.swing.JLabel JL_K;
+    private javax.swing.JLabel JL_K1;
+    private javax.swing.JLabel JL_X;
+    private javax.swing.JLabel JL_X1;
+    private javax.swing.JPanel JPN_TargetUser_Insert;
+    private javax.swing.JPanel JPN_TargetUser_Selected;
+    private javax.swing.JTextArea JTA_Insert_Result;
+    private javax.swing.JTextArea JTA_Selected_Result;
+    private javax.swing.JTextField JTF_K_Insert_Value;
+    private javax.swing.JTextField JTF_K_Selected_Value;
+    private javax.swing.JTextField JTF_X_Insert_Value;
+    private javax.swing.JTextField JTF_X_Selected_Value;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
