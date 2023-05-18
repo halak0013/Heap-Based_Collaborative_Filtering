@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class csvRead<C> {
-    public void readFile(String path, ZeroList<C> result) {
+    public void readFile(String path, ZeroList<ZeroList<C>> result) {
 
         String line = "";
         String csvDelimiter = ",";
@@ -19,10 +19,9 @@ public class csvRead<C> {
                 String[] data = line.split(csvDelimiter);
                 ZeroList<C> tmpZL = new ZeroList<>();
                 for (int i = 0; i < data.length; i++) {
-                    tmpZL.insert(i);
+                    tmpZL.insert((C)data[i]);
                 }
-                System.out.println(data[0]);
-                System.out.println(data[0]);
+                result.insert(tmpZL);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -70,5 +69,10 @@ public class csvRead<C> {
         csvRead<Integer> c = new csvRead<>();
         c.readFileInt("./data/target_user.csv", z1);
         c.print(z1);
+
+        ZeroList<ZeroList<String>> z2 = new ZeroList<>();
+        csvRead<String> c2 = new csvRead<>();
+        c2.readFile("./data/movies.csv", z2);
+        c2.print(z2);
     }
 }
