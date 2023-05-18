@@ -24,26 +24,26 @@ public class Ui extends javax.swing.JFrame {
         JL_K = new javax.swing.JLabel();
         JTF_K_Selected_Value = new javax.swing.JTextField();
         JB_Get_Selected_Recommendation = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        JTA_Selected_Result = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        JLS_Selected_Result = new javax.swing.JList<>();
         JPN_TargetUser_Insert = new javax.swing.JPanel();
         JCB_First_Movie = new javax.swing.JComboBox<>();
         JCB_Second_Movie = new javax.swing.JComboBox<>();
         JCB_Third_Movie = new javax.swing.JComboBox<>();
         JCB_Fourth_Movie = new javax.swing.JComboBox<>();
         JCB_Fifth_Movie = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        JTF_First_Movie_Value = new javax.swing.JTextField();
+        JTF_Second_Movie_Value = new javax.swing.JTextField();
+        JTF_Third_Movie_Value = new javax.swing.JTextField();
+        JTF_Fourth_Movie_Value = new javax.swing.JTextField();
+        JTF_Fifth_Movie_Value = new javax.swing.JTextField();
         JTF_X_Insert_Value = new javax.swing.JTextField();
         JTF_K_Insert_Value = new javax.swing.JTextField();
         JL_X1 = new javax.swing.JLabel();
         JL_K1 = new javax.swing.JLabel();
         JB_Get_Insert_Recommendation = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        JTA_Insert_Result = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        JLS_Insert_Result = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,9 +60,7 @@ public class Ui extends javax.swing.JFrame {
 
         JB_Get_Selected_Recommendation.setText("Get Recommendations");
 
-        JTA_Selected_Result.setColumns(20);
-        JTA_Selected_Result.setRows(5);
-        jScrollPane1.setViewportView(JTA_Selected_Result);
+        jScrollPane3.setViewportView(JLS_Selected_Result);
 
         javax.swing.GroupLayout JPN_TargetUser_SelectedLayout = new javax.swing.GroupLayout(JPN_TargetUser_Selected);
         JPN_TargetUser_Selected.setLayout(JPN_TargetUser_SelectedLayout);
@@ -89,8 +87,8 @@ public class Ui extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(JTF_K_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(32, 32, 32)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         JPN_TargetUser_SelectedLayout.setVerticalGroup(
             JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,10 +110,11 @@ public class Ui extends javax.swing.JFrame {
                             .addComponent(JL_X))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(JB_Get_Selected_Recommendation)
-                .addGap(0, 161, Short.MAX_VALUE))
-            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPN_TargetUser_SelectedLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Selected Part", JPN_TargetUser_Selected);
@@ -128,9 +127,7 @@ public class Ui extends javax.swing.JFrame {
 
         JB_Get_Insert_Recommendation.setText("Get Recommendations");
 
-        JTA_Insert_Result.setColumns(20);
-        JTA_Insert_Result.setRows(5);
-        jScrollPane2.setViewportView(JTA_Insert_Result);
+        jScrollPane4.setViewportView(JLS_Insert_Result);
 
         javax.swing.GroupLayout JPN_TargetUser_InsertLayout = new javax.swing.GroupLayout(JPN_TargetUser_Insert);
         JPN_TargetUser_Insert.setLayout(JPN_TargetUser_InsertLayout);
@@ -143,19 +140,19 @@ public class Ui extends javax.swing.JFrame {
                         .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
                             .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTF_First_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
                             .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTF_Second_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
                             .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField3)))
+                            .addComponent(JTF_Third_Movie_Value)))
                     .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
                         .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(JTF_Fourth_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,39 +162,39 @@ public class Ui extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(JTF_X_Insert_Value, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                            .addComponent(JTF_Fifth_Movie_Value, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                             .addComponent(JTF_K_Insert_Value)
                             .addComponent(JB_Get_Insert_Recommendation, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         JPN_TargetUser_InsertLayout.setVerticalGroup(
             JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4)
                     .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTF_First_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTF_Second_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTF_Third_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTF_Fourth_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTF_Fifth_Movie_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(JL_X1)
@@ -207,8 +204,9 @@ public class Ui extends javax.swing.JFrame {
                             .addComponent(JTF_K_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JL_K1))
                         .addGap(18, 18, 18)
-                        .addComponent(JB_Get_Insert_Recommendation)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(JB_Get_Insert_Recommendation)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Insert Part", JPN_TargetUser_Insert);
@@ -274,26 +272,26 @@ public class Ui extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> JCB_Second_Movie;
     private javax.swing.JComboBox<String> JCB_Third_Movie;
     private javax.swing.JComboBox<String> JCB_User_Select;
+    private javax.swing.JList<String> JLS_Insert_Result;
+    private javax.swing.JList<String> JLS_Selected_Result;
     private javax.swing.JLabel JL_K;
     private javax.swing.JLabel JL_K1;
     private javax.swing.JLabel JL_X;
     private javax.swing.JLabel JL_X1;
     private javax.swing.JPanel JPN_TargetUser_Insert;
     private javax.swing.JPanel JPN_TargetUser_Selected;
-    private javax.swing.JTextArea JTA_Insert_Result;
-    private javax.swing.JTextArea JTA_Selected_Result;
+    private javax.swing.JTextField JTF_Fifth_Movie_Value;
+    private javax.swing.JTextField JTF_First_Movie_Value;
+    private javax.swing.JTextField JTF_Fourth_Movie_Value;
     private javax.swing.JTextField JTF_K_Insert_Value;
     private javax.swing.JTextField JTF_K_Selected_Value;
+    private javax.swing.JTextField JTF_Second_Movie_Value;
+    private javax.swing.JTextField JTF_Third_Movie_Value;
     private javax.swing.JTextField JTF_X_Insert_Value;
     private javax.swing.JTextField JTF_X_Selected_Value;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
