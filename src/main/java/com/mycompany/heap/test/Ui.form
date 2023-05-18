@@ -169,6 +169,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Get Recommendations"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="get_recomended"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">
               <AuxValues>

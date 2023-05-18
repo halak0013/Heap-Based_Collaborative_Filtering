@@ -1,9 +1,25 @@
 package com.mycompany.heap.test;
 
+import javax.swing.DefaultComboBoxModel;
+
 public class Ui extends javax.swing.JFrame {
+    ZeroList<ZeroList<Integer>> tar_us_lst = new ZeroList<>();
+    ZeroList<ZeroList<Integer>> main_us_lst = new ZeroList<>();
+    ZeroList<ZeroList<String>> movie_lst = new ZeroList<>();
 
     public Ui() {
         initComponents();
+        csvRead<Integer> csvInt = new csvRead<>();
+        csvRead<String> csvString = new csvRead<>();
+
+        csvInt.readFileInt("./data/target_user.csv", tar_us_lst);
+        csvInt.readFileInt("./data/main_data.csv", main_us_lst);
+
+        csvString.readFile("./data/movies.csv", movie_lst);
+
+        DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
+        csvInt.insert(tar_us_lst, 0, model);
+        JCB_User_Select.setModel(model);
     }
 
     /**
@@ -59,6 +75,11 @@ public class Ui extends javax.swing.JFrame {
         JL_K.setText("K:");
 
         JB_Get_Selected_Recommendation.setText("Get Recommendations");
+        JB_Get_Selected_Recommendation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                get_recomended(evt);
+            }
+        });
 
         jScrollPane3.setViewportView(JLS_Selected_Result);
 
@@ -227,6 +248,13 @@ public class Ui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void get_recomended(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_get_recomended
+        
+        MaxHeap<Integer> user_reco= new MaxHeap<>(Integer.parseInt(JTF_X_Selected_Value+""));
+        MaxHeap<Integer> reco= new MaxHeap<>(Integer.parseInt(JTF_X_Selected_Value+"")*Integer.parseInt(JTF_K_Selected_Value+""));
+        
+    }//GEN-LAST:event_get_recomended
 
     /**
      * @param args the command line arguments
