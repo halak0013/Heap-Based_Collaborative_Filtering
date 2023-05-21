@@ -49,6 +49,9 @@ public class MaxHeap<T extends Comparable<T>> {
 //! gelen elemanın currentı topupHeapify kontol edilmesi gerekebilir
         } else {
             System.out.println("Heap is full!!!");
+            
+            //! en küçük elemanı bulup heapiy fonksiyonuna göndereceğiz.
+            //! for döngüsünde dizinin içinde bulup döndürebiliriz.
             int toplam_kat = (int) (Math.log(size-1) / Math.log(2)) + 1;
             int alt_index = (int)(Math.pow(2, toplam_kat-1)) - 1;
             int min_index=alt_index;
@@ -121,6 +124,7 @@ public class MaxHeap<T extends Comparable<T>> {
 
     public static void main(String[] args) {
         MaxHeap<Integer> mheap=new MaxHeap<>(10);
+       //! insert ve print fonksiyonlarını yeniden düzelt. 
         mheap.insert(5);
         mheap.insert(3);
         mheap.insert(4);
