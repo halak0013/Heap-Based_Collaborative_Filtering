@@ -4,6 +4,8 @@
  */
 package com.mycompany.heap.test;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author Casper
@@ -12,9 +14,12 @@ public class MaxHeap<T extends Comparable<T>> {
 
     T[] heap;
     int size;
+    // [[0.6,vector1],[0.78,98]]
 //1 2 3 4 5 6 7 8 index
 //6 8 2 4 3 8 1 2 uzaklık
 //3 8 1 2
+
+// ZeroList<Integer>
     public MaxHeap(int capacity) {
         heap = (T[]) new Comparable[capacity];
         size = 0;
@@ -44,14 +49,19 @@ public class MaxHeap<T extends Comparable<T>> {
 //! gelen elemanın currentı topupHeapify kontol edilmesi gerekebilir
         } else {
             System.out.println("Heap is full!!!");
-            current = size;
-            int min = (int)heap[0];
-            while(heap[current].compareTo(heap[parent(current)]) < 0){
-                min = (int) heap[current];
-                topupHeapify(min);
+            int toplam_kat = (int) (Math.log(size-1) / Math.log(2)) + 1;
+            int alt_index = (int)(Math.pow(2, toplam_kat-1)) - 1;
+            int min_index=alt_index;
+            for (int i = alt_index; i < heap.length; i++) {
+                if(heap[i].compareTo(heap[min_index]) < 0){ 
+                    min_index = i;
+                }
             }
+            heap[min_index] = data;
+            topupHeapify(min_index);
         }
     }
+
 
     void topupHeapify(int idx) {
         int left = 2*idx + 1;
@@ -99,5 +109,24 @@ public class MaxHeap<T extends Comparable<T>> {
 
         }
 
+    }
+
+    public void addEl(DefaultListModel<String> dlm) {
+        for (int i = 0; i < heap.length; i++) {
+            //System.out.println(i + "index" + reco.heap[i].vektor.root.data);
+            dlm.addElement(((Distance)heap[i]).vektor.root.data+"");
+            //reco.heap[i].vektor.root.data.toString()
+        }
+    }
+
+    public static void main(String[] args) {
+        MaxHeap<Integer> mheap=new MaxHeap<>(10);
+        mheap.insert(5);
+        mheap.insert(3);
+        mheap.insert(4);
+        mheap.insert(25);
+        mheap.insert(45);
+        //System.out.println(mheap.heap[2]);
+        mheap.print();
     }
 }
