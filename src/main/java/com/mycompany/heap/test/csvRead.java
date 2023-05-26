@@ -44,7 +44,7 @@ public class csvRead<C> {
                 String[] data = line.split(csvDelimiter);
                 ZeroList<Integer> tmpZL = new ZeroList<>();
                 for (int i = 0; i < data.length; i++) {
-                    tmpZL.insert(Integer.parseInt(data[i]));
+                    tmpZL.insertWZ(Integer.parseInt(data[i]));
                 }
                 result.insert(tmpZL);
             }
