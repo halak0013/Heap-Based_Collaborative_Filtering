@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.heap.test;
 
 import javax.swing.DefaultListModel;
@@ -39,7 +35,7 @@ public class MaxHeap<T extends Comparable<T>> {
         int current;
         if (size < heap.length) {
 
-            heap[size] = data;
+            heap[size] = data;//5
              current = size++;
 
             while (heap[current].compareTo(heap[parent(current)]) > 0) {
@@ -86,7 +82,7 @@ public class MaxHeap<T extends Comparable<T>> {
         
 
 
-       /* 
+       
         int left = 2 * idx + 1; // 7
         int right = 2 * idx + 2; // 8
 
@@ -101,7 +97,7 @@ public class MaxHeap<T extends Comparable<T>> {
             swap(max, idx);
             topupHeapify(max);
         }
-        */
+       
 
     }  
     
@@ -146,7 +142,7 @@ public class MaxHeap<T extends Comparable<T>> {
     }
 
     public static void main(String[] args) {
-        MaxHeap<Integer> mheap=new MaxHeap<>(10);
+        MaxHeap2<Integer> mheap=new MaxHeap2<>(10);
        //! insert ve print fonksiyonlarını yeniden düzelt. 
 
        /* 
@@ -161,7 +157,7 @@ public class MaxHeap<T extends Comparable<T>> {
 
          
 
-        MaxHeap<Integer> mheap2=new MaxHeap<>(5);
+        MaxHeap2<Integer> mheap2=new MaxHeap2<>(5);
         mheap2.insert(5);
         mheap2.insert(3);
         mheap2.insert(6);
