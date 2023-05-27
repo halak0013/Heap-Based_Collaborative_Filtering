@@ -20,4 +20,9 @@ public class Distance implements Comparable<Distance> {
     public int compareTo(Distance other) {
         return Double.compare(this.uzaklık, other.uzaklık);
     }
+
+    @Override
+    public String toString() {
+        return this.uzaklık+"";
+    }
 }
