@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -43,6 +43,9 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Main_Part"/>
         <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
       </AccessibilityProperties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTabbedPane1MousePressed"/>
+      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -85,8 +88,8 @@
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" min="-2" pref="183" max="-2" attributes="0"/>
-                      <EmptySpace pref="160" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="317" max="-2" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -208,49 +211,42 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="JCB_First_Movie" min="-2" pref="64" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="JTF_First_Movie_Value" min="-2" pref="245" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="JCB_Second_Movie" min="-2" pref="64" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="JTF_Second_Movie_Value" min="-2" pref="245" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="JCB_Third_Movie" min="-2" pref="64" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="JTF_Third_Movie_Value" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="JCB_Fourth_Movie" min="-2" pref="64" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="JTF_Fourth_Movie_Value" min="-2" pref="245" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="JCB_Fifth_Movie" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="JL_K1" min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="JL_X1" min="-2" pref="23" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="JL_K1" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="JL_X1" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="JTF_X_Insert_Value" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="JTF_Fifth_Movie_Value" alignment="0" pref="245" max="32767" attributes="0"/>
+                                  <Component id="JTF_X_Insert_Value" alignment="0" pref="245" max="32767" attributes="0"/>
                                   <Component id="JTF_K_Insert_Value" max="32767" attributes="0"/>
                                   <Component id="JB_Get_Insert_Recommendation" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="JCB_Fifth_Movie" max="32767" attributes="0"/>
+                                  <Component id="JCB_Fourth_Movie" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JCB_Second_Movie" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JCB_Third_Movie" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JCB_First_Movie" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="JS_1_MOVIE_VAL" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="JS_2_MOVİE_VAL" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="JS_3_MOVİE_VAL" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="JS_4_MOVİE_VAL" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="JS_5_MOVİE_VAL" min="-2" pref="95" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -263,27 +259,27 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="JCB_First_Movie" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="JTF_First_Movie_Value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JS_1_MOVIE_VAL" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="JCB_Second_Movie" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="JTF_Second_Movie_Value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JS_2_MOVİE_VAL" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="JCB_Third_Movie" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="JTF_Third_Movie_Value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JS_3_MOVİE_VAL" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="JCB_Fourth_Movie" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="JTF_Fourth_Movie_Value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JS_4_MOVİE_VAL" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="JCB_Fifth_Movie" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="JTF_Fifth_Movie_Value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JS_5_MOVİE_VAL" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -297,7 +293,7 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="JB_Get_Insert_Recommendation" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -356,16 +352,6 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="JTF_First_Movie_Value">
-            </Component>
-            <Component class="javax.swing.JTextField" name="JTF_Second_Movie_Value">
-            </Component>
-            <Component class="javax.swing.JTextField" name="JTF_Third_Movie_Value">
-            </Component>
-            <Component class="javax.swing.JTextField" name="JTF_Fourth_Movie_Value">
-            </Component>
-            <Component class="javax.swing.JTextField" name="JTF_Fifth_Movie_Value">
-            </Component>
             <Component class="javax.swing.JTextField" name="JTF_X_Insert_Value">
             </Component>
             <Component class="javax.swing.JTextField" name="JTF_K_Insert_Value">
@@ -390,6 +376,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Get Recommendations"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_Get_Insert_RecommendationMousePressed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
               <AuxValues>
@@ -410,6 +399,41 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JSpinner" name="JS_1_MOVIE_VAL">
+              <Properties>
+                <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                  <SpinnerModel initial="1" maximum="5" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="JS_2_MOV&#x130;E_VAL">
+              <Properties>
+                <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                  <SpinnerModel initial="1" maximum="5" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="JS_3_MOV&#x130;E_VAL">
+              <Properties>
+                <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                  <SpinnerModel initial="1" maximum="5" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="JS_4_MOV&#x130;E_VAL">
+              <Properties>
+                <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                  <SpinnerModel initial="1" maximum="5" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="JS_5_MOV&#x130;E_VAL">
+              <Properties>
+                <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                  <SpinnerModel initial="1" maximum="5" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                </Property>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
