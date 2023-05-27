@@ -24,9 +24,14 @@ public class MaxHeap2<T extends Comparable<T>> {
     }
 
     Node<T> parent(Node<T> n) { // 0 1 2 [3] 4 
+        //heap.print();
         Node<T> tmp=heap.root;
+        //System.out.println(n.index);
         int idx=(n.index - 1) / 2;
+        //System.out.print("parent kısmı");
+        //heap.print();
         while(tmp!=null){
+            //System.out.println("idx "+idx+" "+" tmp.index " +tmp.index);
             if(idx==tmp.index)
                 break;
             tmp=tmp.next;
@@ -43,7 +48,10 @@ public class MaxHeap2<T extends Comparable<T>> {
     private boolean isBigger(Node<T> n1, Node<T> n2){
         if (n1.data instanceof Integer || n2.data instanceof Double){
             return (Double.parseDouble(n1.data + "") > Double.parseDouble(n2.data + ""));
-        }else{
+        }else if(n1.data instanceof Distance){
+            return (((Distance)n1.data).compareTo((Distance)n2.data)>0);
+        }
+        else{
             System.out.println("Lütfen sayı sitemli liste oluşturunuz");
             return false;
         }
@@ -122,7 +130,7 @@ public class MaxHeap2<T extends Comparable<T>> {
         //MaxHeap<Integer> mheap=new MaxHeap<>(10);
        //! insert ve print fonksiyonlarını yeniden düzelt. 
 
-       /* 
+        /* 
         mheap.insert(5);
         mheap.insert(3);
         mheap.insert(4);
@@ -132,7 +140,7 @@ public class MaxHeap2<T extends Comparable<T>> {
         mheap.print();
         */
 
-         
+
 
         MaxHeap2<Integer> mheap2=new MaxHeap2<>(5);
         mheap2.insert(5);
