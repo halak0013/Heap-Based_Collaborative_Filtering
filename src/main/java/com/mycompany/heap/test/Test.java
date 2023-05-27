@@ -10,7 +10,7 @@ package com.mycompany.heap.test;
  */
 public class Test {
     public static void main(String[] args) {
-        MaxHeap<Integer> maxHeap = new MaxHeap(5);
+        MaxHeap2<Integer> maxHeap = new MaxHeap2(5);
 
         maxHeap.insert(5);
         maxHeap.insert(4);

@@ -355,18 +355,18 @@ public class Ui extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void wriet_to_list(MaxHeap<Distance> reco) {
+    private void wriet_to_list(MaxHeap2<Distance> reco) {
         DefaultListModel<String> dlm = new DefaultListModel<>();
 
-        reco.addEl(dlm);
+        //reco.addEl(dlm);
         JLS_Selected_Result.setModel(dlm);
 
     }
 
     private void get_recomended(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_get_recomended
 
-        MaxHeap<Distance> user_reco = new MaxHeap<>(Integer.parseInt(JTF_X_Selected_Value.getText() + ""));
-        MaxHeap<Distance> reco = new MaxHeap<>(
+        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JTF_X_Selected_Value.getText() + ""));
+        MaxHeap2<Distance> reco = new MaxHeap2<>(
                 Integer.parseInt(JTF_X_Selected_Value.getText() + "")
                         * Integer.parseInt(JTF_K_Selected_Value.getText() + ""));
         CosSimilarity cs = new CosSimilarity();
