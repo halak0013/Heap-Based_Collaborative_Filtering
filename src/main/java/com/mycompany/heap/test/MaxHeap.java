@@ -12,11 +12,8 @@ import javax.swing.DefaultListModel;
  */
 public class MaxHeap<T extends Comparable<T>> {
 
-//! T -> ZEROlİSTE ÇEVİR AŞAĞIDAKİ KODLARIDA BUNA GÖRE DÜZENLE.
-
-    ZeroList<T>[] heap;
+    T[] heap;
     int size;
-    int capacity;
     // [[0.6,vector1],[0.78,98]]
 //1 2 3 4 5 6 7 8 index
 //6 8 2 4 3 8 1 2 uzaklık
@@ -24,7 +21,7 @@ public class MaxHeap<T extends Comparable<T>> {
 
 // ZeroList<Integer>
     public MaxHeap(int capacity) {
-        heap =  new ZeroList[capacity];
+        heap = (T[]) new Comparable[capacity];
         size = 0;
     }
 
@@ -33,7 +30,7 @@ public class MaxHeap<T extends Comparable<T>> {
     }
             //    idx         max
     void swap(int idx_1, int idx_2) {
-        ZeroList<T> temp = heap[idx_1];
+        T temp = heap[idx_1];
         heap[idx_1] = heap[idx_2];
         heap[idx_2] = temp;
     }
@@ -42,9 +39,8 @@ public class MaxHeap<T extends Comparable<T>> {
         int current;
         if (size < heap.length) {
 
-            heap[size] = new ZeroList<>();
-            heap[size].insert(data);
-            current = size++;
+            heap[size] = data;
+             current = size++;
 
             while (heap[current].compareTo(heap[parent(current)]) > 0) {
                 swap(current, parent(current));
@@ -64,17 +60,16 @@ public class MaxHeap<T extends Comparable<T>> {
             int min_index = 0;
             T temp = data;
             for (int i = 0; i < heap.length; i++) {
-                if(heap[i].root != null && heap[i].root.data.compareTo(temp) <= 0){ 
+                if(heap[i].compareTo(temp) <= 0){ 
                     min_index = i;
-                    temp = (T) heap[i].root.data; 
+                    temp = heap[i]; 
 
                 }
             }
 
             
             if (min_index != 0) {
-              //  heap[size] = new ZeroList<>();
-                heap[size].insert(data);
+                heap[min_index] = data;
                 topupHeapify(min_index);
             }
 
@@ -145,7 +140,7 @@ public class MaxHeap<T extends Comparable<T>> {
     public void addEl(DefaultListModel<String> dlm) {
         for (int i = 0; i < heap.length; i++) {
             //System.out.println(i + "index" + reco.heap[i].vektor.root.data);
-            dlm.addElement(heap[i].root.data.toString());
+            dlm.addElement(((Distance)heap[i]).vektor.root.data+"");
             //reco.heap[i].vektor.root.data.toString()
         }
     }
