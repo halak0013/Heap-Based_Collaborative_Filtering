@@ -20,6 +20,8 @@ public class ZeroList<E> {
             }
         }
         count++;
+        //refsreshIndex();
+
     }
 
 
@@ -36,6 +38,7 @@ public class ZeroList<E> {
             current.next = result;
         }
         count++;
+        refsreshIndex();
         return result;
     }
 
@@ -43,11 +46,12 @@ public class ZeroList<E> {
         if (root == null) {
             return;
         }
+        Node<E> current = root;
+        Node<E> currentB = root;
+        Node<E> min = root;
+        Node<E> minP = root;
+        Node<E> r=root;
         if (root.data instanceof Integer || root.data instanceof Double) {
-            Node<E> current = root;
-            Node<E> currentB = root;
-            Node<E> min = root;
-            Node<E> minP = root;
             while (current != null) {
                 if (Double.parseDouble(min.data + "") > Double.parseDouble(current.data + "")) {
                     min = current;
@@ -61,9 +65,34 @@ public class ZeroList<E> {
             root = root.next;
             else
                 minP.next = min.next;
-
-        } else
+        } else if(root.data instanceof Distance){
+            while (current != null) {
+            System.out.println("hatalı mı");
+                if (((Distance)min.data).compareTo((Distance)current.data) > 0) {
+                    min = current;
+                    minP = currentB;
+                }
+                currentB = current;
+                current = current.next;
+            }
+            System.out.println(min.data + " " + root.data);
+            if (min.data.equals(root.data))
+            root = root.next;
+            else
+                minP.next = min.next;
+        }
+        else
             System.out.println("Lütfen sayı sitemli liste oluşturunuz");
+        refsreshIndex();
+    }
+
+    void refsreshIndex(){
+        Node<E> c = root;
+        int i=0;
+        while(c!=null){
+            c.index = i++;
+            c=c.next;
+        }
     }
 
     public void print() {
@@ -73,6 +102,10 @@ public class ZeroList<E> {
             current = current.next;
         }
         System.out.println();
+    }
+
+    public void setIndex(int i){
+        this.count = i;
     }
 
     public static void main(String[] args) {
@@ -110,11 +143,22 @@ public class ZeroList<E> {
         z4.insert(1.7);
         z4.insert(1.2);
         z4.insert(1.5);
-        z4.insert(1.9);
+        z4.insert(1.0);
 
         z4.print();
         z4.deleteMin();
         z4.print();
+
+        ZeroList<Distance> z5 = new ZeroList<>();
+
+        z5.insert(new Distance(0, 12));
+        z5.insert(new Distance(0, 13));
+        z5.insert(new Distance(0, 17));
+        z5.insert(new Distance(0, 14));
+        z5.insert(new Distance(0, 11));
+        z5.print();
+        z5.deleteMin();
+        z5.print();
 
         // z2.print();
 
