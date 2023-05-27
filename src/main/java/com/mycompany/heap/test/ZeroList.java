@@ -22,16 +22,21 @@ public class ZeroList<E> {
         count++;
     }
 
-    public void insert(E data) {
+
+
+    public Node<E> insert(E data) {
+        Node<E> result = new Node<>(data, count);
         if (root == null)
-            root = new Node<>(data);
+            root = result;
         else {
             Node<E> current = root;
             while (current.next != null) {
                 current = current.next;
             }
-            current.next = new Node<>(data);
+            current.next = result;
         }
+        count++;
+        return result;
     }
 
     public void deleteMin() {
