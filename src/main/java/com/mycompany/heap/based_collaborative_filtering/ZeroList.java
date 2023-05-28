@@ -1,6 +1,5 @@
 //Bisimillahirrahmanirrahim
-package com.mycompany.heap.test;
-
+package com.mycompany.heap.based_collaborative_filtering;
 public class ZeroList<E> {
     Node<E> root;
     private int count = 0;
@@ -20,8 +19,6 @@ public class ZeroList<E> {
             }
         }
         count++;
-        //refsreshIndex();
-
     }
 
 
@@ -50,7 +47,6 @@ public class ZeroList<E> {
         Node<E> currentB = root;
         Node<E> min = root;
         Node<E> minP = root;
-        Node<E> r=root;
         if (root.data instanceof Integer || root.data instanceof Double) {
             while (current != null) {
                 if (Double.parseDouble(min.data + "") > Double.parseDouble(current.data + "")) {
@@ -60,14 +56,12 @@ public class ZeroList<E> {
                 currentB = current;
                 current = current.next;
             }
-            System.out.println(min.data + " " + root.data);
             if (min.data.equals(root.data))
             root = root.next;
             else
                 minP.next = min.next;
         } else if(root.data instanceof Distance){
             while (current != null) {
-            System.out.println("hatalı mı");
                 if (((Distance)min.data).compareTo((Distance)current.data) > 0) {
                     min = current;
                     minP = currentB;
@@ -75,7 +69,7 @@ public class ZeroList<E> {
                 currentB = current;
                 current = current.next;
             }
-            System.out.println(min.data + " " + root.data);
+            //System.out.println(min.data + " " + root.data);
             if (min.data.equals(root.data))
             root = root.next;
             else

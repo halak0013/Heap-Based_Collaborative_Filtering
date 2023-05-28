@@ -1,5 +1,5 @@
 //Bismillahirrahmanirrahim
-package com.mycompany.heap.test;
+package com.mycompany.heap.based_collaborative_filtering;
 
 public class Node<T> {
     T data;

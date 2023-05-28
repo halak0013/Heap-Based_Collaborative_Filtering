@@ -407,9 +407,9 @@ public class Ui extends javax.swing.JFrame {
             Node<String> flm_nod = m_index.data.root;
             for (int j = 0; j < sellected_film_index[i]; j++) {
                 flm_nod = flm_nod.next;
-            }
-            user_vector.setIndex(flm_nod.film_index);
-            user_vector.insert(sellected_film_start[i]);
+            } 
+            user_vector.setIndex(flm_nod.film_index); 
+            user_vector.insert(sellected_film_start[i]); //⭐⭐⭐⭐⭐
             m_index = m_index.next;
         }
 
@@ -480,12 +480,6 @@ public class Ui extends javax.swing.JFrame {
     }
 
     private void wriet_to_list(ZeroList<Integer> zl,JList jls) {
-        // ? zl = 5 , 3 , 6 , 9
-        System.out.println("----------baş----------------------");
-        zl.print();
-        System.out.println("----------baş----------------------");
-        // 7,15,27 movie_lst
-        // ZeroList<Integer> index = zl;
         Node<Integer> idx_n = zl.root;
         DefaultListModel<String> dlm = new DefaultListModel<>();
 
@@ -495,7 +489,6 @@ public class Ui extends javax.swing.JFrame {
                 int index_table = Integer.parseInt(table_i.data.root.data);
                 if (idx_n.data == index_table) {
                     dlm.addElement(table_i.data.root.next.data);
-                    System.out.println("-----------------son liste yazma---------------");
                     break;
                 }
                 table_i = table_i.next;
@@ -509,15 +502,8 @@ public class Ui extends javax.swing.JFrame {
     }
 
     private ZeroList<Integer> fillFilm(MaxHeap2<Distance> user_reco, int k) {
-        // 5 tane kullanıcı capasity içinde
-        // ZeroList<MaxHeap2<Integer>> film_index_lst = new ZeroList<>();//!
-        // kullancağımız
-
         Node<Distance> usr_rc_n = user_reco.heap.root;
         ZeroList<Integer> result = new ZeroList<>();
-        System.out.println("--------------------------------");
-        result.print();
-        System.out.println("--------------------------------");
         int idx = 0;
         for (int i = 0; i < user_reco.capacity; i++) {
 
@@ -537,9 +523,6 @@ public class Ui extends javax.swing.JFrame {
             // film_index_lst.insert(tmp_heap);
             usr_rc_n = usr_rc_n.next;
         }
-        System.out.println("--------------------------------");
-        result.print();
-        System.out.println("--------------------------------");
         return result;
     }
 

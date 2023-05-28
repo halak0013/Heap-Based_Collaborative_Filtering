@@ -1,4 +1,4 @@
-package com.mycompany.heap.test;
+package com.mycompany.heap.based_collaborative_filtering;
 
 import java.util.Random;
 
@@ -13,6 +13,7 @@ public class Ui extends javax.swing.JFrame {
     ZeroList<ZeroList<String>> movie_lst = new ZeroList<>();
 
     ZeroList<Integer> user_vector = new ZeroList<Integer>();
+    ZeroList<ZeroList<String>> film_lst_combo = new ZeroList<>();
 
     public Ui() {
         initComponents();
@@ -40,7 +41,8 @@ public class Ui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -48,30 +50,30 @@ public class Ui extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         JCB_User_Select = new javax.swing.JComboBox<>();
         JL_X = new javax.swing.JLabel();
-        JTF_X_Selected_Value = new javax.swing.JTextField();
         JL_K = new javax.swing.JLabel();
-        JTF_K_Selected_Value = new javax.swing.JTextField();
         JB_Get_Selected_Recommendation = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         JLS_Selected_Result = new javax.swing.JList<>();
+        JSP_X_Selected_Value = new javax.swing.JSpinner();
+        JSP_K_Selected_Value = new javax.swing.JSpinner();
         JPN_TargetUser_Insert = new javax.swing.JPanel();
         JCB_First_Movie = new javax.swing.JComboBox<>();
         JCB_Second_Movie = new javax.swing.JComboBox<>();
         JCB_Third_Movie = new javax.swing.JComboBox<>();
         JCB_Fourth_Movie = new javax.swing.JComboBox<>();
         JCB_Fifth_Movie = new javax.swing.JComboBox<>();
-        JTF_X_Insert_Value = new javax.swing.JTextField();
-        JTF_K_Insert_Value = new javax.swing.JTextField();
         JL_X1 = new javax.swing.JLabel();
         JL_K1 = new javax.swing.JLabel();
         JB_Get_Insert_Recommendation = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         JLS_Insert_Result = new javax.swing.JList<>();
         JS_1_MOVIE_VAL = new javax.swing.JSpinner();
-        JS_2_MOVİE_VAL = new javax.swing.JSpinner();
-        JS_3_MOVİE_VAL = new javax.swing.JSpinner();
-        JS_4_MOVİE_VAL = new javax.swing.JSpinner();
-        JS_5_MOVİE_VAL = new javax.swing.JSpinner();
+        JS_2_MOVIE_VAL = new javax.swing.JSpinner();
+        JS_3_MOVIE_VAL = new javax.swing.JSpinner();
+        JS_4_MOVIE_VAL = new javax.swing.JSpinner();
+        JS_5_MOVIE_VAL = new javax.swing.JSpinner();
+        JSP_X_Insert_Value = new javax.swing.JSpinner();
+        JSP_K_Insert_Value = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,14 +84,25 @@ public class Ui extends javax.swing.JFrame {
             }
         });
 
+        JPN_TargetUser_Selected.setLayout(null);
+
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Target User:");
+        JPN_TargetUser_Selected.add(jLabel1);
+        jLabel1.setBounds(6, 27, 77, 17);
+
+        JPN_TargetUser_Selected.add(JCB_User_Select);
+        JCB_User_Select.setBounds(89, 24, 85, 23);
 
         JL_X.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         JL_X.setText("X:");
+        JPN_TargetUser_Selected.add(JL_X);
+        JL_X.setBounds(10, 70, 23, 17);
 
         JL_K.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         JL_K.setText("K:");
+        JPN_TargetUser_Selected.add(JL_K);
+        JL_K.setBounds(120, 70, 30, 17);
 
         JB_Get_Selected_Recommendation.setText("Get Recommendations");
         JB_Get_Selected_Recommendation.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,88 +110,21 @@ public class Ui extends javax.swing.JFrame {
                 get_recomended(evt);
             }
         });
+        JPN_TargetUser_Selected.add(JB_Get_Selected_Recommendation);
+        JB_Get_Selected_Recommendation.setBounds(40, 110, 157, 23);
 
         jScrollPane3.setViewportView(JLS_Selected_Result);
 
-        javax.swing.GroupLayout JPN_TargetUser_SelectedLayout = new javax.swing.GroupLayout(JPN_TargetUser_Selected);
-        JPN_TargetUser_Selected.setLayout(JPN_TargetUser_SelectedLayout);
-        JPN_TargetUser_SelectedLayout.setHorizontalGroup(
-                JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(JPN_TargetUser_SelectedLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                                .addComponent(jLabel1)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(JCB_User_Select, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                        85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                                .addComponent(JL_X, javax.swing.GroupLayout.PREFERRED_SIZE, 23,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(JPN_TargetUser_SelectedLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                                                .addGap(6, 6, 6)
-                                                                .addComponent(JB_Get_Selected_Recommendation,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 157,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                                                .addComponent(JTF_X_Selected_Value,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 74,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(JL_K,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 29,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(JTF_K_Selected_Value,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 74,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(32, 32, 32)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 317,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(26, Short.MAX_VALUE)));
-        JPN_TargetUser_SelectedLayout.setVerticalGroup(
-                JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addGroup(JPN_TargetUser_SelectedLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel1)
-                                        .addComponent(JCB_User_Select, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(JPN_TargetUser_SelectedLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                                .addGap(3, 3, 3)
-                                                .addGroup(JPN_TargetUser_SelectedLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JL_K)
-                                                        .addComponent(JTF_K_Selected_Value,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 24,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(JPN_TargetUser_SelectedLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JTF_X_Selected_Value,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 21,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JL_X))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(JB_Get_Selected_Recommendation)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                JPN_TargetUser_SelectedLayout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 262,
-                                                Short.MAX_VALUE)
-                                        .addContainerGap()));
+        JPN_TargetUser_Selected.add(jScrollPane3);
+        jScrollPane3.setBounds(262, 6, 317, 262);
+
+        JSP_X_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        JPN_TargetUser_Selected.add(JSP_X_Selected_Value);
+        JSP_X_Selected_Value.setBounds(30, 70, 70, 23);
+
+        JSP_K_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        JPN_TargetUser_Selected.add(JSP_K_Selected_Value);
+        JSP_K_Selected_Value.setBounds(150, 70, 70, 23);
 
         jTabbedPane1.addTab("Selected Part", JPN_TargetUser_Selected);
 
@@ -199,184 +145,117 @@ public class Ui extends javax.swing.JFrame {
 
         JS_1_MOVIE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
 
-        JS_2_MOVİE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        JS_2_MOVIE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
 
-        JS_3_MOVİE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        JS_3_MOVIE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
 
-        JS_4_MOVİE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        JS_4_MOVIE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
 
-        JS_5_MOVİE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        JS_5_MOVIE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+
+        JSP_X_Insert_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        JSP_K_Insert_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         javax.swing.GroupLayout JPN_TargetUser_InsertLayout = new javax.swing.GroupLayout(JPN_TargetUser_Insert);
         JPN_TargetUser_Insert.setLayout(JPN_TargetUser_InsertLayout);
         JPN_TargetUser_InsertLayout.setHorizontalGroup(
-                JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(JPN_TargetUser_InsertLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                                .addGap(35, 35, 35)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(JL_K1, javax.swing.GroupLayout.PREFERRED_SIZE, 29,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JL_X1, javax.swing.GroupLayout.PREFERRED_SIZE, 23,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                false)
-                                                        .addComponent(JTF_X_Insert_Value,
-                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE, 245,
-                                                                Short.MAX_VALUE)
-                                                        .addComponent(JTF_K_Insert_Value)
-                                                        .addComponent(JB_Get_Insert_Recommendation,
-                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 175,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                                        .addGroup(JPN_TargetUser_InsertLayout
-                                                                .createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                .addComponent(JCB_Fifth_Movie, 0,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE)
-                                                                .addComponent(JCB_Fourth_Movie,
-                                                                        javax.swing.GroupLayout.Alignment.LEADING, 0,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE)
-                                                                .addComponent(JCB_Second_Movie,
-                                                                        javax.swing.GroupLayout.Alignment.LEADING, 0,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE)
-                                                                .addComponent(JCB_Third_Movie,
-                                                                        javax.swing.GroupLayout.Alignment.LEADING, 0,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE)
-                                                                .addComponent(JCB_First_Movie,
-                                                                        javax.swing.GroupLayout.Alignment.LEADING, 0,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE))
-                                                        .addGap(18, 18, 18)
-                                                        .addGroup(JPN_TargetUser_InsertLayout
-                                                                .createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addComponent(JS_1_MOVIE_VAL,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 95,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(JS_2_MOVİE_VAL,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 95,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(JS_3_MOVİE_VAL,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 95,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(JS_4_MOVİE_VAL,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 95,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(JS_5_MOVİE_VAL,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 95,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGap(25, 25, 25)))
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(14, Short.MAX_VALUE)));
+            JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(JS_1_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(JS_2_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(JS_3_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(JS_4_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(JS_5_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(JL_X1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(JSP_X_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(JL_K1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(JSP_K_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(JB_Get_Insert_Recommendation, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
         JPN_TargetUser_InsertLayout.setVerticalGroup(
-                JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(JPN_TargetUser_InsertLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane4)
-                                        .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JCB_First_Movie,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JS_1_MOVIE_VAL,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JCB_Second_Movie,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JS_2_MOVİE_VAL,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JCB_Third_Movie,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JS_3_MOVİE_VAL,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JCB_Fourth_Movie,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JS_4_MOVİE_VAL,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JCB_Fifth_Movie,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JS_5_MOVİE_VAL,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(JL_X1)
-                                                        .addComponent(JTF_X_Insert_Value,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(JPN_TargetUser_InsertLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(JTF_K_Insert_Value,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(JL_K1))
-                                                .addGap(18, 18, 18)
-                                                .addComponent(JB_Get_Insert_Recommendation)
-                                                .addGap(0, 18, Short.MAX_VALUE)))
-                                .addContainerGap()));
+            JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JS_1_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JS_2_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JS_3_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JS_4_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JS_5_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(JL_X1))
+                            .addComponent(JSP_X_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(7, 7, 7)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(JL_K1))
+                            .addComponent(JSP_K_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
+                        .addComponent(JB_Get_Insert_Recommendation))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         jTabbedPane1.addTab("Insert Part", JPN_TargetUser_Insert);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTabbedPane1));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 609, Short.MAX_VALUE)
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
+        );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Main_Part");
         jTabbedPane1.getAccessibleContext().setAccessibleDescription("");
@@ -384,63 +263,45 @@ public class Ui extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    ZeroList<ZeroList<String>> film_lst_combo = new ZeroList<>();
 
     private void JB_Get_Insert_RecommendationMousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_JB_Get_Insert_RecommendationMousePressed
-        // ? diğer panelde tavsiyelere getire basınca
-        // ? film_lst_combo:
-        // ! spinnerlrın İ lerini değiştir
-        ZeroList<String> index = film_lst_combo.root.data;
-
         Node<ZeroList<String>> m_index = film_lst_combo.root;
         int[] sellected_film_start = { Integer.parseInt(JS_1_MOVIE_VAL.getValue().toString()),
-                Integer.parseInt(JS_2_MOVİE_VAL.getValue().toString()),
-                Integer.parseInt(JS_3_MOVİE_VAL.getValue().toString()),
-                Integer.parseInt(JS_4_MOVİE_VAL.getValue().toString()),
-                Integer.parseInt(JS_5_MOVİE_VAL.getValue().toString()) };
+                Integer.parseInt(JS_2_MOVIE_VAL.getValue().toString()),
+                Integer.parseInt(JS_3_MOVIE_VAL.getValue().toString()),
+                Integer.parseInt(JS_4_MOVIE_VAL.getValue().toString()),
+                Integer.parseInt(JS_5_MOVIE_VAL.getValue().toString()) };
         int[] sellected_film_index = { JCB_First_Movie.getSelectedIndex(),
                 JCB_Second_Movie.getSelectedIndex(),
                 JCB_Third_Movie.getSelectedIndex(),
                 JCB_Fourth_Movie.getSelectedIndex(),
                 JCB_Fifth_Movie.getSelectedIndex() };
+
         for (int i = 0; i < 5; i++) {
             Node<String> flm_nod = m_index.data.root;
             for (int j = 0; j < sellected_film_index[i]; j++) {
                 flm_nod = flm_nod.next;
             }
             user_vector.setIndex(flm_nod.film_index);
-            user_vector.insert(sellected_film_start[i]);
+            user_vector.insert(sellected_film_start[i]); // ⭐⭐⭐⭐⭐
             m_index = m_index.next;
         }
 
-
-
-        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JTF_X_Insert_Value.getText() + ""));
+        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Insert_Value.getValue().toString()));
 
         CosSimilarity cs = new CosSimilarity();
-        //int sel_index = JCB_User_Select.getSelectedIndex();
-        
-       // Node<ZeroList<Integer>> tmp_tar = tar_us_lst.root;
-
         Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
 
         while (tmp_main != null) {
             user_reco.insert(new Distance(tmp_main.data, cs.calculateCosSim(user_vector, tmp_main.data)));
             tmp_main = tmp_main.next;
         }
-        wriet_to_list(fillFilm(user_reco, Integer.parseInt(JTF_K_Insert_Value.getText() + "")),JLS_Insert_Result);
-
-        // for(int i = 0; i < )
-        // user_vector.setIndex(ran);
-        // user_vector.insert(Integer.parseInt(mv_lst.data.root.toString()));
-
+        wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Insert_Value.getValue().toString())), JLS_Insert_Result);
     } // GEN-LAST:event_JB_Get_Insert_RecommendationMousePressed
 
     private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTabbedPane1MousePressed
-        // ? diğer panele geçince
-        // ? 5000 film içinden rast gele film seç
         Random r = new Random();
-        int ran = r.nextInt(200);
+        int ran = r.nextInt(20);
         Node<ZeroList<String>> mv_lst = movie_lst.root;
         ZeroList<String> films;
         for (int k = 0; k < 5; k++) {
@@ -455,20 +316,18 @@ public class Ui extends javax.swing.JFrame {
             }
             film_lst_combo.insert(films);
         }
-        JComboBox [] vcm_arr={
-            JCB_First_Movie,
+        JComboBox[] vcm_arr = {
+                JCB_First_Movie,
                 JCB_Second_Movie,
                 JCB_Third_Movie,
                 JCB_Fourth_Movie,
                 JCB_Fifth_Movie
         };
-        Node<ZeroList<String>> t=film_lst_combo.root;
+        Node<ZeroList<String>> t = film_lst_combo.root;
         for (int i = 0; i < vcm_arr.length; i++) {
-            add_movie_in_combobox(t.data,vcm_arr[i]);
-            t=t.next;
+            add_movie_in_combobox(t.data, vcm_arr[i]);
+            t = t.next;
         }
-
-        // JCB_Fifth_Movie.sete
     }// GEN-LAST:event_jTabbedPane1MousePressed
 
     private void add_movie_in_combobox(ZeroList<String> movies, JComboBox jcb) {
@@ -479,13 +338,7 @@ public class Ui extends javax.swing.JFrame {
         }
     }
 
-    private void wriet_to_list(ZeroList<Integer> zl,JList jls) {
-        // ? zl = 5 , 3 , 6 , 9
-        System.out.println("----------baş----------------------");
-        zl.print();
-        System.out.println("----------baş----------------------");
-        // 7,15,27 movie_lst
-        // ZeroList<Integer> index = zl;
+    private void wriet_to_list(ZeroList<Integer> zl, JList jls) {
         Node<Integer> idx_n = zl.root;
         DefaultListModel<String> dlm = new DefaultListModel<>();
 
@@ -495,7 +348,6 @@ public class Ui extends javax.swing.JFrame {
                 int index_table = Integer.parseInt(table_i.data.root.data);
                 if (idx_n.data == index_table) {
                     dlm.addElement(table_i.data.root.next.data);
-                    System.out.println("-----------------son liste yazma---------------");
                     break;
                 }
                 table_i = table_i.next;
@@ -509,20 +361,15 @@ public class Ui extends javax.swing.JFrame {
     }
 
     private ZeroList<Integer> fillFilm(MaxHeap2<Distance> user_reco, int k) {
-        // 5 tane kullanıcı capasity içinde
-        // ZeroList<MaxHeap2<Integer>> film_index_lst = new ZeroList<>();//!
-        // kullancağımız
-
         Node<Distance> usr_rc_n = user_reco.heap.root;
         ZeroList<Integer> result = new ZeroList<>();
-        System.out.println("--------------------------------");
-        result.print();
-        System.out.println("--------------------------------");
+        MaxHeap2<Distance> star_heap;
+        Node<Integer> tmp_vetor;
         int idx = 0;
         for (int i = 0; i < user_reco.capacity; i++) {
 
-            MaxHeap2<Distance> star_heap = new MaxHeap2<>(k);
-            Node<Integer> tmp_vetor = usr_rc_n.data.vektor.root.next;
+            star_heap = new MaxHeap2<>(k);
+            tmp_vetor = usr_rc_n.data.vektor.root.next;
 
             while (tmp_vetor != null) {
                 star_heap.insert(new Distance(idx++, tmp_vetor.data));
@@ -534,18 +381,14 @@ public class Ui extends javax.swing.JFrame {
                 result.insert(star_node.data.index);
                 star_node = star_node.next;
             }
-            // film_index_lst.insert(tmp_heap);
             usr_rc_n = usr_rc_n.next;
         }
-        System.out.println("--------------------------------");
-        result.print();
-        System.out.println("--------------------------------");
         return result;
     }
 
     private void get_recomended(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_get_recomended
 
-        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JTF_X_Selected_Value.getText() + ""));
+        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Selected_Value.getValue().toString()));
 
         CosSimilarity cs = new CosSimilarity();
         int sel_index = JCB_User_Select.getSelectedIndex();
@@ -560,9 +403,8 @@ public class Ui extends javax.swing.JFrame {
             user_reco.insert(new Distance(tmp_main.data, cs.calculateCosSim(tmp_tar.data, tmp_main.data)));
             tmp_main = tmp_main.next;
         }
-        wriet_to_list(fillFilm(user_reco, Integer.parseInt(JTF_K_Selected_Value.getText() + "")),JLS_Selected_Result);
+        wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Selected_Value.getValue().toString())), JLS_Selected_Result);
         user_reco.print();
-        // wriet_to_list(user_reco);
     }// GEN-LAST:event_get_recomended
 
     /**
@@ -595,6 +437,7 @@ public class Ui extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Ui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         // </editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -621,15 +464,15 @@ public class Ui extends javax.swing.JFrame {
     private javax.swing.JLabel JL_X1;
     private javax.swing.JPanel JPN_TargetUser_Insert;
     private javax.swing.JPanel JPN_TargetUser_Selected;
+    private javax.swing.JSpinner JSP_K_Insert_Value;
+    private javax.swing.JSpinner JSP_K_Selected_Value;
+    private javax.swing.JSpinner JSP_X_Insert_Value;
+    private javax.swing.JSpinner JSP_X_Selected_Value;
     private javax.swing.JSpinner JS_1_MOVIE_VAL;
-    private javax.swing.JSpinner JS_2_MOVİE_VAL;
-    private javax.swing.JSpinner JS_3_MOVİE_VAL;
-    private javax.swing.JSpinner JS_4_MOVİE_VAL;
-    private javax.swing.JSpinner JS_5_MOVİE_VAL;
-    private javax.swing.JTextField JTF_K_Insert_Value;
-    private javax.swing.JTextField JTF_K_Selected_Value;
-    private javax.swing.JTextField JTF_X_Insert_Value;
-    private javax.swing.JTextField JTF_X_Selected_Value;
+    private javax.swing.JSpinner JS_2_MOVIE_VAL;
+    private javax.swing.JSpinner JS_3_MOVIE_VAL;
+    private javax.swing.JSpinner JS_4_MOVIE_VAL;
+    private javax.swing.JSpinner JS_5_MOVIE_VAL;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;

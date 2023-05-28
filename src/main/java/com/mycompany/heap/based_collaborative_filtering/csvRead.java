@@ -1,9 +1,8 @@
-package com.mycompany.heap.test;
+package com.mycompany.heap.based_collaborative_filtering;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
 import javax.swing.DefaultComboBoxModel;
 
 public class csvRead<C> {
@@ -35,13 +34,14 @@ public class csvRead<C> {
         String line = "";
         String csvDelimiter = ",";
         boolean pass = true;
+        String[] data;
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             while ((line = br.readLine()) != null) {
                 if (pass) {
                     pass = false;
                     continue;
                 }
-                String[] data = line.split(csvDelimiter);
+                data = line.split(csvDelimiter);
                 ZeroList<Integer> tmpZL = new ZeroList<>();
                 for (int i = 0; i < data.length; i++) {
                     tmpZL.insertWZ(Integer.parseInt(data[i]));

@@ -1,4 +1,4 @@
-package com.mycompany.heap.test;
+package com.mycompany.heap.based_collaborative_filtering;
 
 public class CosSimilarity {
     private double length(ZeroList<Integer> vector) {
@@ -31,22 +31,11 @@ public class CosSimilarity {
     }
 
     public double calculateCosSim(ZeroList<Integer> main_vector, ZeroList<Integer> target_vector) {
-        // ? vektörlerin çarpımı / vektörlerin uzunluklarının çarpımı
-        // main : [1,1,1,0,0,1]
-        // 1,2,3,6
-        // target: [0,1,1,1,1,1]
-        // 2,3,4,5,6
         double mul_of_vector = dotProduct(main_vector, target_vector);
         double v_m_dis = length(main_vector);
         double v_t_dis = length(target_vector);
-        // 1,1,1,0,0,1 -> 1,1,1,1
-        // 0,1,2,3,4,5 0,1,2,5
 
-        // 0,1,1,1,1,0 -> 1,1,1,1
-        // 1,2,3,4
-
-        System.out.println(v_m_dis + " " + v_t_dis + " " + mul_of_vector);
-
+        //System.out.println(v_m_dis + " " + v_t_dis + " " + mul_of_vector);
         return mul_of_vector / (Math.sqrt(v_m_dis) * Math.sqrt(v_t_dis));
     }
 }
