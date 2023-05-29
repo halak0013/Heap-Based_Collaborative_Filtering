@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" pref="609" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -86,7 +86,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="89" y="24" width="85" height="-1"/>
+                  <AbsoluteConstraints x="89" y="24" width="130" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -216,7 +216,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="JCB_Fifth_Movie" min="-2" pref="189" max="-2" attributes="0"/>
-                              <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="JS_5_MOVIE_VAL" min="-2" pref="95" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -236,8 +236,9 @@
                               <Component id="JB_Get_Insert_Recommendation" min="-2" pref="175" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -266,13 +267,10 @@
                                   <Component id="JCB_Fourth_Movie" min="-2" max="-2" attributes="0"/>
                                   <Component id="JS_4_MOVIE_VAL" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="JCB_Fifth_Movie" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="JS_5_MOVIE_VAL" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="JCB_Fifth_Movie" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JS_5_MOVIE_VAL" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
