@@ -107,9 +107,6 @@ public class Ui extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 JB_Get_Selected_RecommendationMouseClicked(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                get_recomended(evt);
-            }
         });
         JPN_TargetUser_Selected.add(JB_Get_Selected_Recommendation);
         JB_Get_Selected_Recommendation.setBounds(40, 110, 157, 23);
@@ -137,8 +134,8 @@ public class Ui extends javax.swing.JFrame {
 
         JB_Get_Insert_Recommendation.setText("Get Recommendations");
         JB_Get_Insert_Recommendation.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                JB_Get_Insert_RecommendationMousePressed(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_Get_Insert_RecommendationMouseClicked(evt);
             }
         });
 
@@ -265,10 +262,26 @@ public class Ui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JB_Get_Selected_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_Get_Selected_RecommendationMouseClicked
-        // TODO add your handling code here:
+        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Selected_Value.getValue().toString()));
+
+        CosSimilarity cs = new CosSimilarity();
+        int sel_index = JCB_User_Select.getSelectedIndex();
+
+        Node<ZeroList<Integer>> tmp_tar = tar_us_lst.root;
+        for (int i = 0; i < sel_index; i++) {
+            tmp_tar = tmp_tar.next;
+        }
+        Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
+
+        while (tmp_main != null) {
+            user_reco.insert(new Distance(tmp_main.data, cs.calculateCosSim(tmp_tar.data, tmp_main.data)));
+            tmp_main = tmp_main.next;
+        }
+        wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Selected_Value.getValue().toString())),
+                JLS_Selected_Result);
     }//GEN-LAST:event_JB_Get_Selected_RecommendationMouseClicked
 
-    private void JB_Get_Insert_RecommendationMousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_JB_Get_Insert_RecommendationMousePressed
+    private void JB_Get_Insert_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_Get_Insert_RecommendationMouseClicked
         Node<ZeroList<String>> m_index = film_lst_combo.root;
         ZeroList<Integer> user_vector = new ZeroList<Integer>();
 
@@ -303,25 +316,30 @@ public class Ui extends javax.swing.JFrame {
         }
         wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Insert_Value.getValue().toString())),
                 JLS_Insert_Result);
-    } // GEN-LAST:event_JB_Get_Insert_RecommendationMousePressed
+    }//GEN-LAST:event_JB_Get_Insert_RecommendationMouseClicked
+
 
     private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTabbedPane1MousePressed
         Random r = new Random();
-        int ran = r.nextInt(20);
+        //int ran = 0;
+        int rr;
         Node<ZeroList<String>> mv_lst = movie_lst.root;
         ZeroList<String> films;
         for (int k = 0; k < 5; k++) {
             films = new ZeroList<>();
             for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < ran; j++) {
+                rr=r.nextInt(240);
+                for (int j = 0; j < rr; j++) {
                     mv_lst = mv_lst.next;
+                    //ran++;
                 }
                 Node<String> t = films.insert(mv_lst.data.root.next.data);
                 t.film_index = Integer.parseInt(mv_lst.data.root.data);
-                ran += r.nextInt(20);
+                //ran += r.nextInt(20);
             }
             film_lst_combo.insert(films);
         }
+        //System.out.println(ran);
         JComboBox[] vcm_arr = {
                 JCB_First_Movie,
                 JCB_Second_Movie,
@@ -398,23 +416,7 @@ public class Ui extends javax.swing.JFrame {
 
     private void get_recomended(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_get_recomended
 
-        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Selected_Value.getValue().toString()));
 
-        CosSimilarity cs = new CosSimilarity();
-        int sel_index = JCB_User_Select.getSelectedIndex();
-
-        Node<ZeroList<Integer>> tmp_tar = tar_us_lst.root;
-        for (int i = 0; i < sel_index; i++) {
-            tmp_tar = tmp_tar.next;
-        }
-        Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
-
-        while (tmp_main != null) {
-            user_reco.insert(new Distance(tmp_main.data, cs.calculateCosSim(tmp_tar.data, tmp_main.data)));
-            tmp_main = tmp_main.next;
-        }
-        wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Selected_Value.getValue().toString())),
-                JLS_Selected_Result);
         // user_reco.print();
     }// GEN-LAST:event_get_recomended
 
