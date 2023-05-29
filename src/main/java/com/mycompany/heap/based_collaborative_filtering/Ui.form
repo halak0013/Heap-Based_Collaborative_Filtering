@@ -121,6 +121,7 @@
                 <Property name="text" type="java.lang.String" value="Get Recommendations"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_Get_Selected_RecommendationMouseClicked"/>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="get_recomended"/>
               </Events>
               <Constraints>
