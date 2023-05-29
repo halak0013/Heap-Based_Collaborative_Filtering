@@ -6,14 +6,14 @@ public class Distance implements Comparable<Distance> {
     double distance;
     int index;
 
-    public Distance(ZeroList<Integer> vektor, double uzaklık) {
+    public Distance(ZeroList<Integer> vektor, double distance) {
         this.vektor = vektor;
-        this.distance = uzaklık;
+        this.distance = distance;
     }
 
-    public Distance(int index, double uzaklık) {
+    public Distance(int index, double distance) {
         this.index = index;
-        this.distance = uzaklık;
+        this.distance = distance;
     }
 
     @Override
