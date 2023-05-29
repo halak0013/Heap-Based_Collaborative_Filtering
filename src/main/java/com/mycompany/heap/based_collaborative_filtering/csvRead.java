@@ -22,7 +22,7 @@ public class csvRead<C> {
                 for (int i = 0; i < data.length; i++) {
                     tmpZL.insert((C) data[i]);
                 }
-                result.insert(tmpZL);
+                result.insertFilm(tmpZL,Integer.parseInt(data[0]));
             }
         } catch (IOException e) {
             e.printStackTrace();

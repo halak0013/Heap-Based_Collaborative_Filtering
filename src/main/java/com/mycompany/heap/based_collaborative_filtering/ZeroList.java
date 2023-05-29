@@ -21,7 +21,20 @@ public class ZeroList<E> {
         count++;
     }
 
-
+    public Node<E> insertFilm(E data,int index) {
+        Node<E> result = new Node<>(data, index);
+        if (root == null)
+            root = result;
+        else {
+            Node<E> current = root;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = result;
+        }
+        //refsreshIndex();
+        return result;
+    }
 
     public Node<E> insert(E data) {
         Node<E> result = new Node<>(data, count);

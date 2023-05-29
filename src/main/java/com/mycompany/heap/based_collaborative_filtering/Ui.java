@@ -1,3 +1,4 @@
+//Bismillahirrahmanirrahim
 package com.mycompany.heap.based_collaborative_filtering;
 
 import java.util.Random;
@@ -24,7 +25,6 @@ public class Ui extends javax.swing.JFrame {
         csvInt.readFileInt("./data/main_data.csv", main_us_lst);
 
         csvString.readFile("./data/movies.csv", movie_lst);
-
         DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
         csvInt.insert(tar_us_lst, 0, model);
         JCB_User_Select.setModel(model);
@@ -116,11 +116,11 @@ public class Ui extends javax.swing.JFrame {
         JPN_TargetUser_Selected.add(jScrollPane3);
         jScrollPane3.setBounds(262, 6, 317, 262);
 
-        JSP_X_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        JSP_X_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(5, 1, null, 1));
         JPN_TargetUser_Selected.add(JSP_X_Selected_Value);
         JSP_X_Selected_Value.setBounds(30, 70, 70, 23);
 
-        JSP_K_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        JSP_K_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(3, 1, null, 1));
         JPN_TargetUser_Selected.add(JSP_K_Selected_Value);
         JSP_K_Selected_Value.setBounds(150, 70, 70, 23);
 
@@ -151,9 +151,9 @@ public class Ui extends javax.swing.JFrame {
 
         JS_5_MOVIE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
 
-        JSP_X_Insert_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        JSP_X_Insert_Value.setModel(new javax.swing.SpinnerNumberModel(5, 1, null, 1));
 
-        JSP_K_Insert_Value.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        JSP_K_Insert_Value.setModel(new javax.swing.SpinnerNumberModel(3, 1, null, 1));
 
         javax.swing.GroupLayout JPN_TargetUser_InsertLayout = new javax.swing.GroupLayout(JPN_TargetUser_Insert);
         JPN_TargetUser_Insert.setLayout(JPN_TargetUser_InsertLayout);
@@ -337,9 +337,10 @@ public class Ui extends javax.swing.JFrame {
 
     private void wriet_to_list(ZeroList<Integer> zl, JList jls) {
         Node<Integer> idx_n = zl.root;
+        Node<ZeroList<String>> table_i = movie_lst.root;
+
         DefaultListModel<String> dlm = new DefaultListModel<>();
 
-        Node<ZeroList<String>> table_i = movie_lst.root;
         while (idx_n != null) {
             while (table_i != null) {
                 int index_table = Integer.parseInt(table_i.data.root.data);
@@ -363,17 +364,16 @@ public class Ui extends javax.swing.JFrame {
         MaxHeap2<Distance> star_heap;
         Node<Integer> tmp_vetor;
 
-        int idx = 0;
+        //int idx = 0;
         for (int i = 0; i < user_reco.capacity; i++) {
-
             star_heap = new MaxHeap2<>(k);
-            tmp_vetor = usr_rc_n.data.vektor.root.next;
+            tmp_vetor = usr_rc_n.data.vektor.root.next; // 599 next 3
 
             while (tmp_vetor != null) {
-                star_heap.insert(new Distance(idx++, tmp_vetor.data));
+                star_heap.insert(new Distance(tmp_vetor.index, tmp_vetor.data));
                 tmp_vetor = tmp_vetor.next;
             }
-            idx = 0;
+            //idx = 0;
             Node<Distance> star_node = star_heap.heap.root;
             for (int j = 0; j < k; j++) {
                 result.insert(star_node.data.index);
@@ -381,6 +381,9 @@ public class Ui extends javax.swing.JFrame {
             }
             usr_rc_n = usr_rc_n.next;
         }
+        System.out.println("sonuç");
+        result.print();
+        System.out.println("sonuç");
         return result;
     }
 
@@ -402,7 +405,7 @@ public class Ui extends javax.swing.JFrame {
             tmp_main = tmp_main.next;
         }
         wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Selected_Value.getValue().toString())), JLS_Selected_Result);
-        user_reco.print();
+        //user_reco.print();
     }// GEN-LAST:event_get_recomended
 
     /**
