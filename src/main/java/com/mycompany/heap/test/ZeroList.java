@@ -108,6 +108,36 @@ public class ZeroList<E> {
         this.count = i;
     }
 
+    public Node<E> getLastNode() {
+        if (root == null)
+            return null;
+        else if (root.next == null) {
+            return root;
+        }
+        Node<E> current = root;
+        while (current.next != null) {
+            current = current.next;
+        }
+        return current;
+    }
+
+    public void deleteLastNode() {
+        if (root == null)
+            return;
+        else if (root.next == null) {
+            root = null;
+        } else {
+            Node<E> current = root;
+            Node<E> parent = root;
+            while (current.next != null) {
+                current = current.next;
+                if(current==null){
+                    break;
+                }parent = current;
+            }
+            parent.next = null;
+        }
+    }
     public static void main(String[] args) {
         ZeroList<Integer> z1 = new ZeroList<>();
         ZeroList<Integer> z2 = new ZeroList<>();

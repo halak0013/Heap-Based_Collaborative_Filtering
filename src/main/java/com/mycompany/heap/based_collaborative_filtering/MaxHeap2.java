@@ -44,10 +44,10 @@ public class MaxHeap2<T extends Comparable<T>> {
         
     }
 
-    void insert(T data) {
+    void insert(T h_data) {
         if (size < this.capacity) {
             
-            Node<T> cur_n = heap.insert(data);
+            Node<T> cur_n = heap.insert(h_data);
             size++;
 
             while (isBigger(cur_n, parent(cur_n))) {
@@ -56,7 +56,7 @@ public class MaxHeap2<T extends Comparable<T>> {
             }
         } else {
             //System.out.println("Heap is full!!!");
-            Node<T> cur_n = heap.insert(data);
+            Node<T> cur_n = heap.insert(h_data);
             heap.deleteMin();
             topupHeapify(cur_n);
         }

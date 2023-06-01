@@ -436,6 +436,9 @@ public class Ui extends javax.swing.JFrame {
 
     } // GEN-LAST:event_JB_Get_Insert_RecommendationMousePressed
 
+
+
+    
     private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTabbedPane1MousePressed
         // ? diğer panele geçince
         // ? 5000 film içinden rast gele film seç

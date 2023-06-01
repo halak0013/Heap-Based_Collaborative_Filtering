@@ -41,6 +41,7 @@ public class Ui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -83,25 +84,14 @@ public class Ui extends javax.swing.JFrame {
             }
         });
 
-        JPN_TargetUser_Selected.setLayout(null);
-
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Target User:");
-        JPN_TargetUser_Selected.add(jLabel1);
-        jLabel1.setBounds(6, 27, 77, 17);
-
-        JPN_TargetUser_Selected.add(JCB_User_Select);
-        JCB_User_Select.setBounds(89, 24, 130, 23);
 
         JL_X.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        JL_X.setText("X:");
-        JPN_TargetUser_Selected.add(JL_X);
-        JL_X.setBounds(10, 70, 23, 17);
+        JL_X.setText("User count:");
 
         JL_K.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        JL_K.setText("K:");
-        JPN_TargetUser_Selected.add(JL_K);
-        JL_K.setBounds(120, 70, 30, 17);
+        JL_K.setText("Film count:");
 
         JB_Get_Selected_Recommendation.setText("Get Recommendations");
         JB_Get_Selected_Recommendation.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -109,29 +99,77 @@ public class Ui extends javax.swing.JFrame {
                 JB_Get_Selected_RecommendationMouseClicked(evt);
             }
         });
-        JPN_TargetUser_Selected.add(JB_Get_Selected_Recommendation);
-        JB_Get_Selected_Recommendation.setBounds(30, 110, 190, 23);
 
+        JLS_Selected_Result.setBorder(null);
+        JLS_Selected_Result.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JLS_Selected_Result.setFixedCellHeight(23);
+        JLS_Selected_Result.setPreferredSize(new java.awt.Dimension(10, 20));
         jScrollPane3.setViewportView(JLS_Selected_Result);
 
-        JPN_TargetUser_Selected.add(jScrollPane3);
-        jScrollPane3.setBounds(262, 6, 317, 262);
-
         JSP_X_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(5, 1, null, 1));
-        JPN_TargetUser_Selected.add(JSP_X_Selected_Value);
-        JSP_X_Selected_Value.setBounds(30, 70, 70, 23);
 
         JSP_K_Selected_Value.setModel(new javax.swing.SpinnerNumberModel(3, 1, null, 1));
-        JPN_TargetUser_Selected.add(JSP_K_Selected_Value);
-        JSP_K_Selected_Value.setBounds(150, 70, 70, 23);
+
+        javax.swing.GroupLayout JPN_TargetUser_SelectedLayout = new javax.swing.GroupLayout(JPN_TargetUser_Selected);
+        JPN_TargetUser_Selected.setLayout(JPN_TargetUser_SelectedLayout);
+        JPN_TargetUser_SelectedLayout.setHorizontalGroup(
+            JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(6, 6, 6)
+                        .addComponent(JCB_User_Select, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(JL_X, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(JSP_X_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                                .addGap(80, 80, 80)
+                                .addComponent(JSP_K_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JL_K, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(JB_Get_Selected_Recommendation, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        JPN_TargetUser_SelectedLayout.setVerticalGroup(
+            JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel1))
+                    .addComponent(JCB_User_Select, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JL_X)
+                    .addComponent(JSP_X_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(JPN_TargetUser_SelectedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JSP_K_Selected_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_K))
+                .addGap(57, 57, 57)
+                .addComponent(JB_Get_Selected_Recommendation))
+            .addGroup(JPN_TargetUser_SelectedLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         jTabbedPane1.addTab("Selected Part", JPN_TargetUser_Selected);
 
         JL_X1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        JL_X1.setText("X:");
+        JL_X1.setText("User count:");
 
         JL_K1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        JL_K1.setText("K:");
+        JL_K1.setText("Film count:");
 
         JB_Get_Insert_Recommendation.setText("Get Recommendations");
         JB_Get_Insert_Recommendation.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,6 +178,7 @@ public class Ui extends javax.swing.JFrame {
             }
         });
 
+        JLS_Insert_Result.setFixedCellHeight(23);
         jScrollPane4.setViewportView(JLS_Insert_Result);
 
         JS_1_MOVIE_VAL.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
@@ -161,45 +200,43 @@ public class Ui extends javax.swing.JFrame {
         JPN_TargetUser_InsertLayout.setHorizontalGroup(
             JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
                 .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(JS_1_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(JS_2_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(JS_3_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(JS_4_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(JS_5_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(JL_X1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(JSP_X_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(JL_K1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(JSP_K_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(JCB_First_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(JS_1_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
+                        .addComponent(JCB_Second_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(JS_2_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Third_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(JS_3_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(JS_4_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(JS_5_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(JL_X1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(JSP_X_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(JL_K1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73)
+                        .addComponent(JSP_K_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
+                        .addGap(82, 82, 82)
                         .addComponent(JB_Get_Insert_Recommendation, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
         JPN_TargetUser_InsertLayout.setVerticalGroup(
@@ -224,24 +261,24 @@ public class Ui extends javax.swing.JFrame {
                             .addComponent(JCB_Fourth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JS_4_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(6, 6, 6)
-                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(JCB_Fifth_Movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JS_5_MOVIE_VAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(5, 5, 5)
+                        .addGap(6, 6, 6)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addGap(1, 1, 1)
+                                .addGap(3, 3, 3)
                                 .addComponent(JL_X1))
                             .addComponent(JSP_X_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(7, 7, 7)
                         .addGroup(JPN_TargetUser_InsertLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPN_TargetUser_InsertLayout.createSequentialGroup()
-                                .addGap(9, 9, 9)
+                                .addGap(3, 3, 3)
                                 .addComponent(JL_K1))
                             .addComponent(JSP_K_Insert_Value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(JB_Get_Insert_Recommendation))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jTabbedPane1.addTab("Insert Part", JPN_TargetUser_Insert);
@@ -254,7 +291,7 @@ public class Ui extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Main_Part");
@@ -264,29 +301,36 @@ public class Ui extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JB_Get_Selected_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_Get_Selected_RecommendationMouseClicked
-        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Selected_Value.getValue().toString()));
-
+    private double cosSim(Node<Integer> tar, Node<Integer> main) {
         CosSimilarity cs = new CosSimilarity();
-        int sel_index = JCB_User_Select.getSelectedIndex();
+        return cs.calculateCosSim(tar.next, main.next);
 
+    }
+
+    // ! kullanıcı ile film getirme
+    private void JB_Get_Selected_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_JB_Get_Selected_RecommendationMouseClicked
+        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Selected_Value.getValue().toString()));
+        Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
+        int sel_index = JCB_User_Select.getSelectedIndex();
         Node<ZeroList<Integer>> tmp_tar = tar_us_lst.root;
         for (int i = 0; i < sel_index; i++) {
             tmp_tar = tmp_tar.next;
         }
-        Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
-
         while (tmp_main != null) {
-            user_reco.insert(new Distance(tmp_main.data, cs.calculateCosSim(tmp_tar.data, tmp_main.data)));
+            user_reco.insert(new Distance(tmp_main.data, cosSim(tmp_tar.data.root, tmp_main.data.root)));
             tmp_main = tmp_main.next;
         }
+        user_reco.print();
         wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Selected_Value.getValue().toString())),
                 JLS_Selected_Result);
-    }//GEN-LAST:event_JB_Get_Selected_RecommendationMouseClicked
+    }// GEN-LAST:event_JB_Get_Selected_RecommendationMouseClicked
 
-    private void JB_Get_Insert_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_Get_Insert_RecommendationMouseClicked
+    // ! yıldız⭐ ile film getirme
+    private void JB_Get_Insert_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_JB_Get_Insert_RecommendationMouseClicked
         Node<ZeroList<String>> m_index = film_lst_combo.root;
         ZeroList<Integer> user_vector = new ZeroList<Integer>();
+        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Insert_Value.getValue().toString()));
+        Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
 
         int[] sellected_film_start = { Integer.parseInt(JS_1_MOVIE_VAL.getValue().toString()),
                 Integer.parseInt(JS_2_MOVIE_VAL.getValue().toString()),
@@ -304,45 +348,25 @@ public class Ui extends javax.swing.JFrame {
             for (int j = 0; j < sellected_film_index[i]; j++) {
                 flm_nod = flm_nod.next;
             }
-            user_vector.insertFilm(sellected_film_start[i],flm_nod.film_index); // ⭐⭐⭐⭐⭐
+            user_vector.insertFilm(sellected_film_start[i], flm_nod.film_index); // ⭐⭐⭐⭐⭐
             m_index = m_index.next;
         }
 
-        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Insert_Value.getValue().toString()));
-
-        CosSimilarity cs = new CosSimilarity();
-        Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
-
         while (tmp_main != null) {
-            user_reco.insert(new Distance(tmp_main.data, cs.calculateCosSim(user_vector, tmp_main.data)));
+            user_reco.insert(new Distance(tmp_main.data, cosSim(user_vector.root, tmp_main.data.root)));
             tmp_main = tmp_main.next;
         }
         wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Insert_Value.getValue().toString())),
                 JLS_Insert_Result);
-    }//GEN-LAST:event_JB_Get_Insert_RecommendationMouseClicked
+    }// GEN-LAST:event_JB_Get_Insert_RecommendationMouseClicked
 
-
+    // ! panel değiştirince filmileri doldur
     private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTabbedPane1MousePressed
         Random r = new Random();
-        //int ran = 0;
+        // int ran = 0;
         int rr;
         Node<ZeroList<String>> mv_lst = movie_lst.root;
         ZeroList<String> films;
-        for (int k = 0; k < 5; k++) {
-            films = new ZeroList<>();
-            for (int i = 0; i < 5; i++) {
-                rr=r.nextInt(240);
-                for (int j = 0; j < rr; j++) {
-                    mv_lst = mv_lst.next;
-                    //ran++;
-                }
-                Node<String> t = films.insert(mv_lst.data.root.next.data);
-                t.film_index = Integer.parseInt(mv_lst.data.root.data);
-                //ran += r.nextInt(20);
-            }
-            film_lst_combo.insert(films);
-        }
-        //System.out.println(ran);
         JComboBox[] vcm_arr = {
                 JCB_First_Movie,
                 JCB_Second_Movie,
@@ -350,6 +374,22 @@ public class Ui extends javax.swing.JFrame {
                 JCB_Fourth_Movie,
                 JCB_Fifth_Movie
         };
+
+        for (int k = 0; k < 5; k++) {
+            films = new ZeroList<>();
+            for (int i = 0; i < 5; i++) {
+                rr = r.nextInt(240);
+                for (int j = 0; j < rr; j++) {
+                    mv_lst = mv_lst.next;
+                    // ran++;
+                }
+                Node<String> t = films.insert(mv_lst.data.root.next.data);
+                t.film_index = Integer.parseInt(mv_lst.data.root.data);
+                // ran += r.nextInt(20);
+            }
+            film_lst_combo.insert(films);
+        }
+        // System.out.println(ran);
         Node<ZeroList<String>> t = film_lst_combo.root;
         for (int i = 0; i < vcm_arr.length; i++) {
             add_movie_in_combobox(t.data, vcm_arr[i]);
@@ -365,63 +405,61 @@ public class Ui extends javax.swing.JFrame {
         }
     }
 
-    private void wriet_to_list(ZeroList<Integer> zl, JList jls) {
-        Node<Integer> idx_n = zl.root;
-        Node<ZeroList<String>> table_i = movie_lst.root;
 
+
+    // ! filmleri lsiteye ekliyor
+    private void wriet_to_list(ZeroList<Distance> zl, JList jls) {
         DefaultListModel<String> dlm = new DefaultListModel<>();
+        Node<Distance> film_data_node = zl.root; // ? index distance user_id
+        Node<ZeroList<String>> m_node; //? filmeri isim olarak tutyor
 
-        while (idx_n != null) {
-            while (table_i != null) {
-                int index_table = Integer.parseInt(table_i.data.root.data);
-                if (idx_n.data == index_table) {
-                    dlm.addElement(table_i.data.root.next.data);
+
+        while(film_data_node!=null){
+            m_node = movie_lst.root;
+            while(m_node!=null){
+                if(film_data_node.data.d_index==Integer.parseInt(m_node.data.root.data)){
+                    dlm.addElement("n:" + m_node.data.root.next.data+" u: "+film_data_node.data.user_id+" s⭐: "+film_data_node.data.distance);
                     break;
                 }
-                table_i = table_i.next;
+                m_node=m_node.next;
             }
-            table_i = movie_lst.root;
-            idx_n = idx_n.next;
+            film_data_node=film_data_node.next;
+            //dlm.addElement(table_i.data.root.next.data + " index: " + idx_n.data);
         }
-        // reco.addEl(dlm);
+
         jls.setModel(dlm);
 
     }
 
-    private ZeroList<Integer> fillFilm(MaxHeap2<Distance> user_reco, int k) {
-        Node<Distance> usr_rc_n = user_reco.heap.root;
-        ZeroList<Integer> result = new ZeroList<>();
-        MaxHeap2<Distance> star_heap;
-        Node<Integer> tmp_vetor;
+    // ! hangi film olduğunu kullanıcadan buluyor
+    private ZeroList<Distance> fillFilm(MaxHeap2<Distance> user_reco, int k) {
+        ZeroList<Distance> result = new ZeroList<>(); // ?index distance user_id star
 
-        // int idx = 0;
-        for (int i = 0; i < user_reco.capacity; i++) {
-            star_heap = new MaxHeap2<>(k);
-            tmp_vetor = usr_rc_n.data.vektor.root.next; // 599 next 3
+        MaxHeap2<Distance> film_heap;
+        Node<Distance> us_node = user_reco.heap.root; // ? vektör benzerlik
+        Node<Integer> us_vector; //? 571 -> 3
+        Node<Distance> heap_film_node;
+        int index;
 
-            while (tmp_vetor != null) {
-                star_heap.insert(new Distance(tmp_vetor.index, tmp_vetor.data));
-                tmp_vetor = tmp_vetor.next;
+        for (int i = 0; i < user_reco.capacity; i++) {//? kullanıcıları geçiyoruz
+            film_heap = new MaxHeap2<>(k);// inidex yıldız
+
+
+            us_vector =us_node.data.vektor.root.next;//? kullanıcı vektörünün ilk yıldızı
+            while(us_vector!=null){
+                film_heap.insert(new Distance(us_vector.index,us_vector.data));
+                us_vector=us_vector.next;
             }
-            // idx = 0;
-            Node<Distance> star_node = star_heap.heap.root;
+
+            heap_film_node=film_heap.heap.root;
             for (int j = 0; j < k; j++) {
-                result.insert(star_node.data.index);
-                star_node = star_node.next;
+                result.insert(new Distance(heap_film_node.data.d_index, heap_film_node.data.distance, us_node.data.vektor.root.data));
+                heap_film_node = heap_film_node.next;
             }
-            usr_rc_n = usr_rc_n.next;
+            us_node = us_node.next;
         }
-        System.out.println("sonuç");
-        result.print();
-        System.out.println("sonuç");
         return result;
     }
-
-    private void get_recomended(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_get_recomended
-
-
-        // user_reco.print();
-    }// GEN-LAST:event_get_recomended
 
     /**
      * @param args the command line arguments

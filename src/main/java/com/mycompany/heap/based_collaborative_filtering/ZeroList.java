@@ -1,5 +1,6 @@
 //Bisimillahirrahmanirrahim
 package com.mycompany.heap.based_collaborative_filtering;
+
 public class ZeroList<E> {
     Node<E> root;
     private int count = 0;
@@ -21,7 +22,7 @@ public class ZeroList<E> {
         count++;
     }
 
-    public Node<E> insertFilm(E data,int index) {
+    public Node<E> insertFilm(E data, int index) {
         Node<E> result = new Node<>(data, index);
         if (root == null)
             root = result;
@@ -32,7 +33,7 @@ public class ZeroList<E> {
             }
             current.next = result;
         }
-        //refsreshIndex();
+        // refsreshIndex();
         return result;
     }
 
@@ -70,35 +71,34 @@ public class ZeroList<E> {
                 current = current.next;
             }
             if (min.data.equals(root.data))
-            root = root.next;
+                root = root.next;
             else
                 minP.next = min.next;
-        } else if(root.data instanceof Distance){
+        } else if (root.data instanceof Distance) {
             while (current != null) {
-                if (((Distance)min.data).compareTo((Distance)current.data) > 0) {
+                if (((Distance) min.data).compareTo((Distance) current.data) > 0) {
                     min = current;
                     minP = currentB;
                 }
                 currentB = current;
                 current = current.next;
             }
-            //System.out.println(min.data + " " + root.data);
+            // System.out.println(min.data + " " + root.data);
             if (min.data.equals(root.data))
-            root = root.next;
+                root = root.next;
             else
                 minP.next = min.next;
-        }
-        else
+        } else
             System.out.println("Lütfen sayı sitemli liste oluşturunuz");
         refsreshIndex();
     }
 
-    void refsreshIndex(){
+    void refsreshIndex() {
         Node<E> c = root;
-        int i=0;
-        while(c!=null){
+        int i = 0;
+        while (c != null) {
             c.index = i++;
-            c=c.next;
+            c = c.next;
         }
     }
 
@@ -111,7 +111,7 @@ public class ZeroList<E> {
         System.out.println();
     }
 
-    public void setIndex(int i){
+    public void setIndex(int i) {
         this.count = i;
     }
 

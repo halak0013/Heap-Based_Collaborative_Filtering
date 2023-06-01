@@ -49,4 +49,34 @@ public class CosSimilarity {
 
         return mul_of_vector / (Math.sqrt(v_m_dis) * Math.sqrt(v_t_dis));
     }
+    public static void main(String[] args) {
+        ZeroList<Integer> z1=new ZeroList<Integer>();
+        z1.insertWZ(1);
+        z1.insertWZ(0);
+        z1.insertWZ(2);
+        z1.insertWZ(3);
+        z1.insertWZ(5);
+        z1.insertWZ(0);
+        z1.insertWZ(0);
+        z1.insertWZ(2);
+
+
+
+
+
+        ZeroList<Integer> z2=new ZeroList<Integer>();
+        z2.insertWZ(3);
+        z2.insertWZ(4);
+        z2.insertWZ(0);
+        z2.insertWZ(0);
+        z2.insertWZ(2);
+        z2.insertWZ(3);
+        z2.insertWZ(4);
+        z2.insertWZ(0);
+
+        CosSimilarity c=new CosSimilarity();
+        System.out.println(c.calculateCosSim(z1, z2));
+        System.out.println(c.dotProduct(z1, z2));
+
+        }
 }
