@@ -309,26 +309,27 @@ public class Ui extends javax.swing.JFrame {
 
     // ! kullanıcı ile film getirme
     private void JB_Get_Selected_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_JB_Get_Selected_RecommendationMouseClicked
-        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Selected_Value.getValue().toString()));
-        Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
-        int sel_index = JCB_User_Select.getSelectedIndex();
-        Node<ZeroList<Integer>> tmp_tar = tar_us_lst.root;
-        for (int i = 0; i < sel_index; i++) {
+        MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Selected_Value.getValue().toString())); //? en yakın X kullanıcı değerini user_reco değişkenine atıyoruz.
+        Node<ZeroList<Integer>> tmp_main = main_us_lst.root; //? okuduğumuz main_data.csv dosyasındaki kullanıcıların vektörünü atıyoruz.
+        int sel_index = JCB_User_Select.getSelectedIndex(); //? ComboBox'dan seçtiğimiz kullanıcıyı alıyoruz.
+        Node<ZeroList<Integer>> tmp_tar = tar_us_lst.root; //? okuduğumuz target_user.csv dosyasındaki user_id'ları atıyoruz.
+        for (int i = 0; i < sel_index; i++) { //? seçtiğimiz user değerine kadar gidiyoruz.
             tmp_tar = tmp_tar.next;
         }
-        while (tmp_main != null) {
-            user_reco.insert(new Distance(tmp_main.data, cosSim(tmp_tar.data.root, tmp_main.data.root)));
-            tmp_main = tmp_main.next;
+        while (tmp_main != null) { //? distance hesaplaması için tmp_main'e attıyoruz, 2.değer olarak cosSim'den tmp_tar ve tmp_main değerlerimizi atıyoruz.   
+            user_reco.insert(new Distance(tmp_main.data, cosSim(tmp_tar.data.root, tmp_main.data.root))); //? hesapladığımız değerleri user_reco atıyoruz.
+            tmp_main = tmp_main.next; //? main_data.csv tablosundaki satırlarda dolaşıyor.
         }
-        user_reco.print();
+        //? user_reco'daki değerleri komut satırına yazıyoruz.
+        user_reco.print();                                     //? K tane en yüksek puan alan filmleri alıyoruz.
         wriet_to_list(fillFilm(user_reco, Integer.parseInt(JSP_K_Selected_Value.getValue().toString())),
-                JLS_Selected_Result);
+                JLS_Selected_Result); //? write_to list metoduyla Jlistemize fillFilm metodundan bulduğumuz değerleri yazıyoruz.
     }// GEN-LAST:event_JB_Get_Selected_RecommendationMouseClicked
 
     // ! yıldız⭐ ile film getirme
     private void JB_Get_Insert_RecommendationMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_JB_Get_Insert_RecommendationMouseClicked
-        Node<ZeroList<String>> m_index = film_lst_combo.root;
-        ZeroList<Integer> user_vector = new ZeroList<Integer>();
+        Node<ZeroList<String>> m_index = film_lst_combo.root; //? m_index filim listemizi temsil ediyor.
+        ZeroList<Integer> user_vector = new ZeroList<Integer>(); //? user_vector kullanıcının seçtiği filmleri temsil eden bir vektördür.
         MaxHeap2<Distance> user_reco = new MaxHeap2<>(Integer.parseInt(JSP_X_Insert_Value.getValue().toString()));
         Node<ZeroList<Integer>> tmp_main = main_us_lst.root;
 
