@@ -6,8 +6,9 @@ public class ZeroList<E> {
     private int count = 0;
 
     public void insertWZ(int data) {
-        // ? 0 1 0 0 1 1
-        // ? 0 1 2 3 4 5
+        //? 0 1 0 0 1 1
+        //? 0 1 2 3 4 5
+        //? sıfırlı özel amttrisler için
         if (data != 0) {
             if (root == null)
                 root = new Node(data, count);
@@ -23,6 +24,7 @@ public class ZeroList<E> {
     }
 
     public Node<E> insertFilm(E data, int index) {
+        //? filmlere özel ekleme yapabilmek için
         Node<E> result = new Node<>(data, index);
         if (root == null)
             root = result;
@@ -33,11 +35,11 @@ public class ZeroList<E> {
             }
             current.next = result;
         }
-        // refsreshIndex();
         return result;
     }
 
     public Node<E> insert(E data) {
+        //? her türlü veriyi eklemek için
         Node<E> result = new Node<>(data, count);
         if (root == null)
             root = result;
@@ -54,6 +56,8 @@ public class ZeroList<E> {
     }
 
     public void deleteMin() {
+        //? max heapte gerektiği için 
+        //? en küçük elemanı siler
         if (root == null) {
             return;
         }

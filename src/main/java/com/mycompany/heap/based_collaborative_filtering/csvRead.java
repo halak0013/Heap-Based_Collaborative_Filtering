@@ -7,7 +7,7 @@ import javax.swing.DefaultComboBoxModel;
 
 public class csvRead<C> {
     public void readFile(String path, ZeroList<ZeroList<C>> result) {
-
+        //? herahngi bir csv dosyayı okumak için
         String line = "";
         String csvDelimiter = ",";
         boolean pass = true;
@@ -30,7 +30,7 @@ public class csvRead<C> {
     }
 
     public void readFileInt(String path, ZeroList<ZeroList<Integer>> result) {
-
+        //? özel sıfırlı matris csv okumları için
         String line = "";
         String csvDelimiter = ",";
         boolean pass = true;
@@ -67,6 +67,7 @@ public class csvRead<C> {
     }
 
     void insert(ZeroList<ZeroList<C>> zl, int index, DefaultComboBoxModel<String> model) {
+        //? gelen combo boxa göre modeli doldurur
         Node<ZeroList<C>> tmo = zl.root;
         while (tmo != null) {
             Node<C> tmi = tmo.data.root;
