@@ -419,13 +419,15 @@ public class Ui extends javax.swing.JFrame {
             m_node = movie_lst.root;
             while(m_node!=null){
                 if(film_data_node.data.d_index==Integer.parseInt(m_node.data.root.data)){
-                    dlm.addElement("n:" + m_node.data.root.next.data+" u: "+film_data_node.data.user_id+" s⭐: "+film_data_node.data.distance);
+                    //?         filmi lsitesinden id sonrasındaki ismi       distance şeklidekinden id
+                    dlm.addElement("n:" + m_node.data.root.next.data+" u: "+film_data_node.data.user_id
+                    //? distance şeklidekinden yıldız
+                    +" s⭐: "+film_data_node.data.distance);
                     break;
                 }
                 m_node=m_node.next;
             }
             film_data_node=film_data_node.next;
-            //dlm.addElement(table_i.data.root.next.data + " index: " + idx_n.data);
         }
 
         jls.setModel(dlm);
@@ -438,22 +440,21 @@ public class Ui extends javax.swing.JFrame {
 
         MaxHeap2<Distance> film_heap;
         Node<Distance> us_node = user_reco.heap.root; // ? vektör benzerlik
-        Node<Integer> us_vector; //? 571 -> 3
-        Node<Distance> heap_film_node;
-        int index;
+        Node<Integer> us_vector; //? 571 -> 3 -> 5 -> 4
+        Node<Distance> heap_film_node;//? filmleri tutuyor yıladızlarıyla birlikte hesaplama yapıyor
 
         for (int i = 0; i < user_reco.capacity; i++) {//? kullanıcıları geçiyoruz
             film_heap = new MaxHeap2<>(k);// inidex yıldız
 
 
             us_vector =us_node.data.vektor.root.next;//? kullanıcı vektörünün ilk yıldızı
-            while(us_vector!=null){
+            while(us_vector!=null){//? yıldız ile hesaplamalı heape atıyor
                 film_heap.insert(new Distance(us_vector.index,us_vector.data));
                 us_vector=us_vector.next;
             }
 
             heap_film_node=film_heap.heap.root;
-            for (int j = 0; j < k; j++) {
+            for (int j = 0; j < k; j++) {//? her seferinde heapte tuttuğu değerleri listeye atıyor
                 result.insert(new Distance(heap_film_node.data.d_index, heap_film_node.data.distance, us_node.data.vektor.root.data));
                 heap_film_node = heap_film_node.next;
             }
